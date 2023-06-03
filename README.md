@@ -17,7 +17,7 @@ The installer, *setup.iss*, was done using [Inno Setup](https://jrsoftware.org/i
 As for the game files, check under */data*.
 
 ## Download
-- [Deer Hunter 2005 HU Corner Modpack](DH2005mp.exe)
+- [Deer Hunter 2005 HU Corner Modpack](https://github.com/italou/DH2005/releases/download/v1.0/DH2005mp.exe)
     
 **Checksum (SHA256):**  
 To validate if the installation file hasn't been altered, you can calculate the file checksum (SHA256), for example using [Get-FileHash](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash?view=powershell-7.3), and compare with the following value: 

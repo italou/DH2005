@@ -1,0 +1,11 @@
+General {
+
+  Name        = PSE X-Force 7 GX Comp Bow;
+  Action      = CompoundBow;
+  Ammo        = easton390;
+  SkinCamo    = data\pre-made\skins\camo\camo10.jpg;
+  SkinDetail  = data\pre-made\skins\detail\singleshotrifle\singleshot[det1].png;
+  Reticle     = data\pre-made\reticles\testreticle2.png;
+  Calibration = 50.000000;
+  ReadOnly    = TRUE;
+}

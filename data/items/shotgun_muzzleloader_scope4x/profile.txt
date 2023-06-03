@@ -1,0 +1,31 @@
+//==============================================================================================================
+// 2-4x Shotgun/Muzzleloader Scope
+//==============================================================================================================
+
+//general item variables
+General {
+
+  Name     = Shotgun_Muzzleloader_Scope4x;
+  Type     = Scope;
+  Useable  = FALSE;
+
+  //multiplayer item category
+  MultiplayerCategory = Scopes;
+
+  Helper = @Scope;
+  Model  = Data\Items\Common\Models\Shotgun_Muzzleloader_Scope.j3d;
+  
+  //zoom values
+  Zoom = 2, 4;
+
+  //scope class for compatible scopes/items
+  ScopeClass = ShotgunScope;
+  
+  //show range finding?
+  ShowRangeFinding = TRUE;
+
+  InterfaceScale = 1;
+
+  //use scope support flag
+  UseScopeSupport = TRUE;
+}

@@ -1,0 +1,84 @@
+//==============================================================================================================
+// .22-250 Rem 50 grain (pra2250rb) 
+//==============================================================================================================
+
+//general item variables
+General {
+
+  Name     = pra2250rb;
+  Type     = Ammo;
+  Useable  = FALSE;
+
+  Model  = Data\Ammo\Common\Models\7mm.j3d;
+  Model2 = Data\Ammo\Common\Models\7mm[ej].j3d;
+
+  Preloads = Data\Ammo\Common\Models\7mm[ej].j3d,
+             Data\Ammo\Common\Sounds\Shoot_RifleLow1.wav,
+             Data\Ammo\Common\Sounds\Shoot_RifleLow2.wav,
+             Data\Ammo\Common\Sounds\Shoot_RifleLow3.wav;
+
+  Icons = Data\Ammo\Common\Icons\257.tex;
+
+  //shake strengh
+  ShakeStrength = 12;
+
+  InterfaceScale = 10;
+}
+
+//ammo variables
+Ammo {
+
+  FlyingModel = Data\Ammo\Common\Models\7mm[fly].j3d;
+
+  SoundFire = Data\Ammo\Common\Sounds\Shoot_RifleLow1.wav|Data\Ammo\Common\Sounds\Shoot_RifleLow2.wav|Data\Ammo\Common\Sounds\Shoot_RifleLow3.wav;
+
+  WeaponCompatibility = Autoloader|SingleShotRifle|PumpRifle|BoltRifle|LeverRifle|SingleShotPistol;
+
+  //min/max calibration values accepted by this weapon item (in dcms)
+  MinCalibration = 500;
+  MaxCalibration = 3000;
+
+  //default calibration for this weapon (in dcms)
+  DefaultCalibration = 2500;
+
+  MaxRange     = 500; //meters
+
+  //ammo energy at def. calibration compared to deer primary killzone death: high >= fast > medium > slow >= low
+  Energy = low;
+
+  //spread angle (will be added to the ammunition spread angle)
+  SpreadAngle  = 0.025;
+
+  NoiseFXMinTime  = 0.5;
+  NoiseFXMaxTime  = 0.75;
+  NoiseFXStrength = 0.7;
+
+  //hit marks (radius in cm)
+  HitMarkRadius[Animal] = 8;
+  HitMarks[Animal] = Data\CommonFX\BulletMarks\Blood\HurtBullet.tex;
+  HitMarkRadius[Target] = 8;
+  HitMarks[Target] = Data\CommonFX\BulletMarks\Paper\Bullet.tex;
+
+  //energy of the shot in the form: [<distance(yards)>] = <energy>
+  AmmoEnergy[0]   = 1540;
+  AmmoEnergy[100] = 1188;
+  AmmoEnergy[200] = 910;
+  AmmoEnergy[300] = 689;
+  AmmoEnergy[400] = 512;
+  AmmoEnergy[500] = 372;
+
+  //drop of ammunition shot in the form: [<distance(yards)>] = <inches>
+  AmmoDrop[50]   = 0;
+  AmmoDrop[100]  = -1.7;
+  AmmoDrop[150]  = -2.1;
+  AmmoDrop[200]  = -1.6;
+  AmmoDrop[250]  = 0;
+  AmmoDrop[300]  = 2.8;
+  AmmoDrop[400]  = 12.8;
+  AmmoDrop[500]  = 30.4;
+
+  //penetration of ammunition shot in the form: [<distance(meters)>] = <depth(cm)>
+  AmmoPenetration[0]   = 50;
+  AmmoPenetration[50]  = 20;
+  AmmoPenetration[500] = 5;
+}

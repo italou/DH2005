@@ -1,0 +1,120 @@
+
+DynamicObject[DRY_GRASS1] {
+
+  Filename = Data\World\Models\DynamicObjects\drygrass[DYN]_a.j3d;
+  BendFilename = Data\World\Models\DynamicObjects\drygrass[HLP]_a.j3d;
+
+  Layer[PRAIRIE] {
+
+    Minimum = 50;
+  }
+
+  Density = 0.024;
+  MaxScale = 1.333333;
+  AlignToGround = TRUE;
+  CreationRadiusFromCamera = 32;
+  FullOpacityCameraDistance = 16;
+}
+
+
+DynamicObject[DRY_GRASS2] {
+
+  Filename = Data\World\Models\DynamicObjects\drygrass[DYN]_a.j3d;
+  BendFilename = Data\World\Models\DynamicObjects\drygrass[HLP]_a.j3d;
+
+  Layer[PRAIRIE] {
+
+    Minimum = 50;
+  }
+
+  Density = 0.012;
+  MinScale = 1.166667;
+  MaxScale = 1.5;
+  AlignToGround = TRUE;
+  CreationRadiusFromCamera = 80;
+  FullOpacityCameraDistance = 64;
+}
+
+
+DynamicObject[DRY_GRASS3] {
+
+  Filename = Data\World\Models\DynamicObjects\drygrass[DYN]_a.j3d;
+  BendFilename = Data\World\Models\DynamicObjects\drygrass[HLP]_a.j3d;
+
+  Layer[PRAIRIE] {
+
+    Minimum = 50;
+  }
+
+  Density = 0.0075;
+  MinScale = 1.25;
+  MaxScale = 1.666667;
+  AlignToGround = TRUE;
+  CreationRadiusFromCamera = 128;
+  FullOpacityCameraDistance = 96;
+}
+
+
+DynamicObject[RABBIT_BRUSH] {
+
+  Filename = Data\World\Models\DynamicObjects\rabbitbrush[DYN]_winter.j3d;
+  BendFilename = Data\World\Models\DynamicObjects\rabbitbrush[HLP]_winter.j3d;
+  BendFXAngle = 20;
+
+  Layer[PRAIRIE] {
+
+    Minimum = 50;
+  }
+
+  Density = 0.0075;
+  MinScale = 0.85;
+  MaxScale = 1.15;
+  AlignToGround = TRUE;
+  CreationRadiusFromCamera = 80;
+  FullOpacityCameraDistance = 60;
+}
+
+
+DynamicObject[ROCKS] {
+
+  Filename = Data\World\Models\DynamicObjects\rocks[DYN]_ut.j3d;
+
+  Layer[GRIT] {
+
+    Minimum = 50;
+  }
+
+
+  Layer[PRAIRIE] {
+
+    Minimum = 50;
+  }
+
+  Density = 0.004;
+  MinScale = 0.9;
+  MaxScale = 1.4;
+  AlignToGround = TRUE;
+  CreationRadiusFromCamera = 48;
+  FullOpacityCameraDistance = 24;
+}
+
+
+DynamicObject[SAGE_BRUSH] {
+
+  Filename = Data\World\Models\DynamicObjects\sagebrush[DYN]_a.j3d;
+  BendFilename = Data\World\Models\DynamicObjects\sagebrush[HLP]_a.j3d;
+  BendFXAngle = 30;
+
+  Layer[PRAIRIE] {
+
+    Minimum = 50;
+  }
+
+  Density = 0.0125;
+  MinScale = 0.9;
+  MaxScale = 1.5;
+  AlignToGround = TRUE;
+  HeightAdjust = 10;
+  CreationRadiusFromCamera = 96;
+  FullOpacityCameraDistance = 64;
+}

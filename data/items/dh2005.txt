@@ -1,0 +1,29 @@
+Blind
+Tripod
+Treestand
+BlindScout
+TreestandScout
+DeerFeeder
+MockScrape
+Binoculars
+Scope_3-9x
+Scope_4-12x
+Zeiss_6-24x
+Zeiss_8-40x
+CrossbowScope
+Spotting Scope
+Shotgun_Muzzleloader_Scope
+Shotgun_Muzzleloader_Scope4x
+ThermalGoggles
+ThermalScope
+GPS
+Map
+Antler Call
+Doe_in_Heat_Call
+Electronic Call
+Grunt Call
+Big_Buck_Scent
+Doe_In_Estrus_Scent
+Scent Stomper
+Deer_Food
+Camera

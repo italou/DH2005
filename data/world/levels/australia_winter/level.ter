@@ -1,0 +1,159 @@
+;-----------------------------------------------------------------------------
+; TERRAIN RESOURCE
+;-----------------------------------------------------------------------------
+;Version        = RES_TERRAIN_VERSION;
+;Name           = szNameOfTheLevel;
+;ColorRange     = nColorRange;
+;PixelSize      = fPixelSizeValue;
+;HeightScale    = fHeightScaleValue;
+;VBSize         = nSize;
+;TexLayer[nNum] = szName, szTextureFilename1, szTextureFilename2,
+;                 fXTile1, fZTile1, fXTile2, fZTile2, wwMultitexBlend,
+;                 fOverallAlpha, wwSourceBlend, wwTargetBlend;
+;   * szTextureFilename2 is optional,
+;     will result (szName, szTextureFilename1, , fXTile1, ...)
+;QLinkResource[nIndex] = szFilename;
+;Water(szName, nX, nY, nZ) = szWaterFilename (WAT);
+;   * WAT file must be created from LSW. Compatible w/ LSC & TER?
+;Light[szName]  = nType, nRed, nGreen, nBlue, fMultiplier, fPosX, fPosY,
+;                 fPosZ, fDirX, fDirY, fDirZ, fRadius, fGlowRadius,
+;                 nUseInPrecalc, nAffectWorldObjects, nShowGlow,
+;                 nShowLensFlares, nDynamicShadows;
+;WaterStream    = szName;
+;   * WST file NAME.WST must exist
+;Helper[szName] = fPosX, fPosY, fPosZ, fRadius, fDirX, fDirY, fDirZ,
+;                 fUpX, fUpY, fUpZ, szRawData;
+;SkyColor = bnActivated, bnLinearExpControl, fExposure, fGammaRed, fGammaGreen, fGammaBlue
+;           fOverCast, fTurbidity, bnApplyInFogColor, bnApplyInLightColor, bnApplyInLightPosition, fStartHour,
+;           fFinalHour, fLat, fLong, nMeridian, nDay, nMonth, nYear;
+;CloudsShadows = nActive, fSpeed, fAngle, fTilling, fTransAmount, szFilename;
+;Custom[szName] = szRawData;
+Version = 6;
+Name = Type your level name here;
+ColorRange = 64;
+PixelSize = 40.000000;
+HeightScale = 0.015259;
+VBSize = 16;
+TexLayer[0] = soil, Data\World\GroundTextures\soil[DET]_aAU.png, Data\World\GroundTextures\soil[MAC]_aAU.png, 0.75, 0.75, 8.00, 8.00, 5, 1.00, 5, 6;
+TexLayer[1] = rock, Data\World\GroundTextures\rock[DET]_aAU.png, Data\World\GroundTextures\rock[MAC]_aAU.png, 1.00, 1.00, 30.00, 15.00, 5, 1.00, 5, 6;
+TexLayer[2] = eucalyptus, Data\World\GroundTextures\soil[DET]_aAU.png, Data\World\GroundTextures\soil[MAC]_aAU.png, 0.75, 0.75, 8.00, 8.00, 5, 1.00, 5, 6;
+TexLayer[3] = callitris, Data\World\GroundTextures\soil[DET]_aAU.png, Data\World\GroundTextures\soil[MAC]_aAU.png, 0.75, 0.75, 8.00, 8.00, 5, 1.00, 5, 6;
+TexLayer[4] = undertree_acacia, Data\World\GroundTextures\undertree[DET]_aAU.png, Data\World\GroundTextures\soil[MAC]_aAU.png, 0.75, 0.75, 5.00, 5.00, 5, 1.00, 5, 6;
+TexLayer[5] = road, Data\World\GroundTextures\road[DET]_aAU.png, Data\World\GroundTextures\road[MAC]_aAU.png, 3.00, 3.00, 12.00, 12.00, 5, 1.00, 5, 6;
+TexLayer[6] = gravel, Data\World\GroundTextures\gravel[DET]_aAU.png, Data\World\GroundTextures\gravel[MAC]_aAU.png, 1.00, 1.00, 8.00, 8.00, 5, 1.00, 5, 6;
+TexLayer[7] = no_dynamic, Data\World\GroundTextures\soil[DET]_aAU.png, Data\World\GroundTextures\soil[MAC]_aAU.png, 0.75, 0.75, 8.00, 8.00, 5, 1.00, 5, 6;
+QLinkResource[0] = Data\World\Models\Vegetation\Callitris\callitris[3DM]_20m.j3d;
+QLinkResource[1] = Data\World\Models\Vegetation\Acacia\acacia[3DM]_8m.j3d;
+QLinkResource[2] = Data\World\Models\Vegetation\Acacia\acacia[3DM]_5m.j3d;
+QLinkResource[3] = Data\World\Models\Vegetation\Eucalyptus\eucalyptus[3DM]_18m.j3d;
+QLinkResource[4] = Data\World\Models\Ambient\stone - au\stone[3DM]_aAU.j3d;
+QLinkResource[5] = Data\World\Models\Ambient\stone - au\stone[3DM]_bAU.j3d;
+QLinkResource[6] = Data\World\Models\Ambient\stone - au\stoneclu[3DM]_au.j3d;
+QLinkResource[7] = Data\World\Models\Ambient\stone - au\stone[3DM]_cAU.j3d;
+QLinkResource[8] = Data\World\Models\Buildings\rail_bridge - au\railbridge[3DM]_au.j3d;
+QLinkResource[9] = Data\World\Models\Ambient\temite - au\temite[3DM]_a.j3d;
+QLinkResource[10] = Data\World\Models\Ambient\temite - au\temite[3DM]_c.j3d;
+QLinkResource[11] = Data\World\Models\Ambient\temite - au\temite[3DM]_b.j3d;
+QLinkResource[12] = Data\World\Models\Objects\aborigenalfire\aboriginalfire[3DM]_a.j3d;
+QLinkResource[13] = Data\World\Models\Buildings\bridge - au\bridge[3DM]_aAU.j3d;
+QLinkResource[14] = Data\World\Models\Objects\guardrail - ga\guardrail[3DM].j3d;
+QLinkResource[15] = Data\World\Models\Vegetation\Triodia\triodiacluwinter[3DM]_b.j3d;
+Light[sun] = DirectionalAmbient, True, True, True, True, True;
+Light[overall] = Ambient, False, True, False, False, False;
+Light[moon] = DirectionalAmbient, False, True, False, False, False;
+FogFrame[0] = 252, 235, 226, 0.30, 1.00;
+LightFrame[0] = sun, 255, 255, 225, 0.50, 3596.36, 345.39, -5890.77, -0.99, 0.00, -0.16, 0.00, 500.00;
+LightFrame[0] = overall, 28, 44, 47, 1.00, -1858.27, -60.07, -380.16, -0.97, -0.25, 0.04, 0.00, 0.00;
+LightFrame[0] = moon, 31, 53, 75, 1.00, -5512.58, 140.21, 987.14, 0.94, -0.34, 0.00, 0.00, 0.00;
+FogFrame[1] = 252, 240, 246, 0.45, 1.00;
+LightFrame[1] = sun, 255, 255, 225, 0.75, 3596.36, 345.39, -5890.77, -0.94, -0.22, -0.25, 0.00, 1000.00;
+LightFrame[1] = overall, 75, 58, 31, 1.00, -1858.27, -60.07, -380.16, -0.97, -0.25, 0.04, 0.00, 0.00;
+LightFrame[1] = moon, 78, 106, 135, 0.75, -5512.58, 140.21, 987.14, 0.92, -0.29, 0.26, 0.00, 0.00;
+FogFrame[2] = 251, 242, 252, 0.60, 1.00;
+LightFrame[2] = sun, 255, 255, 225, 0.80, 3596.36, 345.39, -5890.77, -0.84, -0.44, -0.32, 0.00, 1100.00;
+LightFrame[2] = overall, 64, 64, 64, 1.00, -1858.27, -60.07, -380.16, -0.97, -0.25, 0.04, 0.00, 0.00;
+LightFrame[2] = moon, 138, 197, 255, 0.25, -5512.58, 140.21, 987.14, 0.83, -0.21, 0.51, 0.00, 0.00;
+FogFrame[3] = 248, 240, 253, 0.70, 1.00;
+LightFrame[3] = sun, 255, 255, 225, 0.85, 3596.36, 345.39, -5890.77, -0.68, -0.62, -0.39, 0.00, 1200.00;
+LightFrame[3] = overall, 64, 64, 64, 1.00, -1858.27, -60.07, -380.16, -0.97, -0.25, 0.04, 0.00, 0.00;
+LightFrame[3] = moon, 138, 197, 255, 0.25, -5512.58, 140.21, 987.14, 0.69, -0.12, 0.72, 0.00, 0.00;
+FogFrame[4] = 247, 240, 253, 0.80, 1.00;
+LightFrame[4] = sun, 255, 255, 225, 1.00, 3596.36, 345.39, -5890.77, -0.48, -0.76, -0.44, 0.00, 1300.00;
+LightFrame[4] = overall, 66, 66, 66, 1.00, -1858.27, -60.07, -380.16, -0.97, -0.25, 0.04, 0.00, 0.00;
+LightFrame[4] = moon, 138, 197, 255, 0.25, -5512.58, 140.21, 987.14, 0.49, -0.02, 0.87, 0.00, 0.00;
+FogFrame[5] = 247, 240, 253, 0.80, 1.00;
+LightFrame[5] = sun, 255, 255, 225, 1.20, 3596.36, 345.39, -5890.77, -0.25, -0.85, -0.47, 0.00, 1400.00;
+LightFrame[5] = overall, 68, 68, 68, 1.00, -1858.27, -60.07, -380.16, -0.97, -0.25, 0.04, 0.00, 0.00;
+LightFrame[5] = moon, 138, 197, 255, 0.25, -5512.58, 140.21, 987.14, 0.25, 0.08, 0.96, 0.00, 0.00;
+FogFrame[6] = 247, 240, 252, 0.80, 1.00;
+LightFrame[6] = sun, 255, 255, 225, 1.50, 3596.36, 345.39, -5890.77, 0.00, -0.88, -0.48, 0.00, 1500.00;
+LightFrame[6] = overall, 70, 70, 70, 1.00, -1858.27, -60.07, -380.16, -0.97, -0.25, 0.04, 0.00, 0.00;
+LightFrame[6] = moon, 138, 197, 255, 0.25, -5512.58, 140.21, 987.14, 0.00, 0.17, 0.99, 0.00, 0.00;
+FogFrame[7] = 247, 240, 253, 0.75, 1.00;
+LightFrame[7] = sun, 255, 255, 225, 1.20, 3596.36, 345.39, -5890.77, 0.24, -0.85, -0.47, 0.00, 1400.00;
+LightFrame[7] = overall, 68, 68, 68, 1.00, -1858.27, -60.07, -380.16, -0.97, -0.25, 0.04, 0.00, 0.00;
+LightFrame[7] = moon, 138, 197, 255, 0.25, -5512.58, 140.21, 987.14, -0.25, 0.08, 0.96, 0.00, 0.00;
+FogFrame[8] = 246, 240, 253, 0.75, 1.00;
+LightFrame[8] = sun, 255, 255, 225, 1.00, 3596.36, 345.39, -5890.77, 0.48, -0.76, -0.44, 0.00, 1300.00;
+LightFrame[8] = overall, 66, 66, 66, 1.00, -1858.27, -60.07, -380.16, -0.97, -0.25, 0.04, 0.00, 0.00;
+LightFrame[8] = moon, 138, 197, 255, 0.25, -5512.58, 140.21, 987.14, -0.49, -0.02, 0.87, 0.00, 0.00;
+FogFrame[9] = 247, 240, 253, 0.70, 1.00;
+LightFrame[9] = sun, 255, 255, 225, 0.85, 3596.36, 345.39, -5890.77, 0.68, -0.62, -0.39, 0.00, 1200.00;
+LightFrame[9] = overall, 64, 64, 64, 1.00, -1858.27, -60.07, -380.16, -0.97, -0.25, 0.04, 0.00, 0.00;
+LightFrame[9] = moon, 138, 197, 255, 0.25, -5512.58, 140.21, 987.14, -0.69, -0.12, 0.72, 0.00, 0.00;
+FogFrame[10] = 251, 242, 252, 0.60, 1.00;
+LightFrame[10] = sun, 255, 255, 225, 0.80, 3596.36, 345.39, -5890.77, 0.84, -0.44, -0.32, 0.00, 1000.00;
+LightFrame[10] = overall, 64, 64, 64, 1.00, -1858.27, -60.07, -380.16, -0.97, -0.25, 0.04, 0.00, 0.00;
+LightFrame[10] = moon, 138, 197, 255, 0.25, -5512.58, 140.21, 987.14, -0.83, -0.21, 0.51, 0.00, 0.00;
+FogFrame[11] = 252, 240, 247, 0.50, 1.00;
+LightFrame[11] = sun, 255, 255, 225, 0.60, 3596.36, 345.39, -5890.77, 0.94, -0.23, -0.25, 0.00, 700.00;
+LightFrame[11] = overall, 57, 63, 73, 1.00, -1858.27, -60.07, -380.16, -0.97, -0.25, 0.04, 0.00, 0.00;
+LightFrame[11] = moon, 78, 106, 135, 0.75, -5512.58, 140.21, 987.14, -0.92, -0.29, 0.26, 0.00, 0.00;
+FogFrame[12] = 252, 236, 229, 0.00, 1.00;
+LightFrame[12] = sun, 255, 255, 225, 0.75, 3596.36, 345.39, -5890.77, 0.99, -0.01, -0.16, 0.00, 500.00;
+LightFrame[12] = overall, 64, 49, 43, 1.00, -1858.27, -60.07, -380.16, -0.97, -0.25, 0.04, 0.00, 0.00;
+LightFrame[12] = moon, 31, 53, 75, 1.00, -5512.58, 140.21, 987.14, -0.94, -0.34, 0.00, 0.00, 0.00;
+WaterStream = New Water 1;
+WaterNoiseTextures = 0, 1.00, 64, 64, 128, 60.00, 60.00, 40.00, 5.00, 5.00, 5.00, 0.10, 1.00, 0.30, 0.6000;
+SkyColor = 1, 0, 1.000000, 0.800000, 0.820000, 0.890000, 0.000000, 2.000000, 1, 0, 1, 7.000000, 18.400000, -20.000000, 138.000000, 10, 30, 8, 2004;
+CloudsShadows = 1, 0.0050000, 0.000000, 0.250000, 0.250000, Data\World\CommonFX\Clouds\shadow.png;
+Helper[@ObjInst] = -1311.98, 181.27, 9202.69, 0.00, -0.95, -0.01, -0.30, -0.01, 1.00, 0.00, @CreateObject: Data\World\CommonFX\Background\australia.bgr;
+Helper[@ObjInst] = -9040.85, 315.07, -12384.97, 84.39, 0.00, 0.00, -1.00, 0.00, 1.00, 0.00, @CreateObject: Data\World\Models\Vehicles\trains\boxcarA[3DM].j3d;
+Helper[@ObjInst] = -9040.85, 315.07, -12243.30, 80.02, 0.00, 0.00, -1.00, 0.00, 1.00, 0.00, @CreateObject: Data\World\Models\Vehicles\trains\boxcarB[3DM].j3d;
+Helper[@ObjInst] = -12581.88, 219.04, 9057.57, 26.18, -1.00, 0.00, 0.00, 0.00, 1.00, 0.00, @CreateObject: Data\World\Models\Vehicles\Car\carblue[3DM].j3d;
+Helper[@ObjInst] = -12584.30, 219.04, 8976.77, 26.18, 1.00, 0.00, 0.00, 0.00, 1.00, 0.00, @CreateObject: Data\World\Models\Vehicles\Car\cargrey[3DM].j3d;
+Helper[@ObjInst] = -9040.85, 315.07, -12538.23, 90.14, 0.00, 0.00, -1.00, 0.00, 1.00, 0.00, @CreateObject: Data\World\Models\Vehicles\trains\CT22[3DM].j3d;
+Helper[@ObjInst] = -9040.85, 315.07, -12101.76, 80.01, 0.00, 0.00, -1.00, 0.00, 1.00, 0.00, @CreateObject: Data\World\Models\Vehicles\trains\gondola[3DM].j3d;
+Helper[@ObjInst] = -12519.06, 219.04, 9064.64, 26.18, -1.00, 0.00, 0.00, 0.00, 1.00, 0.00, @CreateObject: Data\World\Models\Vehicles\Car\cargrey[3DM].j3d;
+Helper[@ObjInst] = -12641.70, 219.04, 8975.38, 26.18, 1.00, 0.00, 0.00, 0.00, 1.00, 0.00, @CreateObject: Data\World\Models\Vehicles\Car\carblue[3DM].j3d;
+Helper[@ObjInst] = -6564.97, 248.81, 7079.91, 115.95, 0.01, 0.00, 1.00, 0.00, 1.00, 0.00, @CreateObject: Data\World\Models\Buildings\house - au\house[3DM]_au.j3d;
+Helper[@ObjInst] = -6237.05, 240.48, -5118.07, 84.38, 0.71, 0.00, -0.70, 0.00, 1.00, 0.00, @CreateObject: Data\World\Models\Buildings\Ruina - au\ruina[3DM]_aAU.j3d;
+Helper[@ObjInst] = -5887.50, 250.02, -8510.12, 84.38, 0.72, 0.00, 0.69, 0.00, 1.00, 0.00, @CreateObject: Data\World\Models\Buildings\Ruina - au\ruina[3DM]_aAU.j3d;
+Helper[@ObjInst] = -1437.10, 152.16, 9190.13, 0.00, 0.61, 0.00, -0.79, 0.00, 1.00, 0.00, @CreateObject: Data\World\CommonFX\RenderFX\Australia_Level.rfx;
+Custom[@ObjType] = Name:B_Railbridge|Mode:QuickLinked|Filename:<1000>Data\World\Models\Buildings\rail_bridge - au\railbridge[3DM]_au.j3d|XAxisMin:1|XAxisMax:1|YAxisMin:1|YAxisMax:1|ZAxisMin:1|ZAxisMax:1|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:False|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:V_Acacia_5m|Mode:QuickLinked|Filename:<1000>Data\World\Models\Vegetation\Acacia\acacia[3DM]_5m.j3d|XAxisMin:0.55|XAxisMax:1.1|YAxisMin:0.55|YAxisMax:1.1|ZAxisMin:0.55|ZAxisMax:1.1|PropScale:True|RandomYMin:-5|RandomYMax:0|AlignToGroundNormal:False|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:V_Acacia_8m|Mode:QuickLinked|Filename:<1000>Data\World\Models\Vegetation\Acacia\acacia[3DM]_8m.j3d|XAxisMin:0.55|XAxisMax:1.3|YAxisMin:0.55|YAxisMax:1.3|ZAxisMin:0.55|ZAxisMax:1.3|PropScale:True|RandomYMin:-5|RandomYMax:0|AlignToGroundNormal:False|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:V_Eucalypitus_18m|Mode:QuickLinked|Filename:<1000>Data\World\Models\Vegetation\Eucalyptus\eucalyptus[3DM]_18m.j3d|XAxisMin:0.5|XAxisMax:1|YAxisMin:0.5|YAxisMax:1|ZAxisMin:0.5|ZAxisMax:1|PropScale:True|RandomYMin:-20|RandomYMax:0|AlignToGroundNormal:False|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:V_Callitris|Mode:QuickLinked|Filename:<1000>Data\World\Models\Vegetation\Callitris\callitris[3DM]_20m.j3d|XAxisMin:0.5|XAxisMax:1|YAxisMin:0.5|YAxisMax:1|ZAxisMin:0.5|ZAxisMax:1|PropScale:True|RandomYMin:-20|RandomYMax:0|AlignToGroundNormal:False|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:B_Ruina|Mode:Linked|Filename:<1000>Data\World\Models\Buildings\Ruina - au\ruina[3DM]_aAU.j3d|XAxisMin:1|XAxisMax:1|YAxisMin:1|YAxisMax:1|ZAxisMin:1|ZAxisMax:1|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:False|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:B_House|Mode:Linked|Filename:<1000>Data\World\Models\Buildings\house - au\house[3DM]_au.j3d|XAxisMin:1|XAxisMax:1|YAxisMin:1|YAxisMax:1|ZAxisMin:1|ZAxisMax:1|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:False|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:A_Temite_a|Mode:QuickLinked|Filename:<1000>Data\World\Models\Ambient\temite - au\temite[3DM]_a.j3d|XAxisMin:2.5|XAxisMax:4|YAxisMin:2.5|YAxisMax:4|ZAxisMin:2.5|ZAxisMax:4|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:True|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:A_Temite_b|Mode:QuickLinked|Filename:<1000>Data\World\Models\Ambient\temite - au\temite[3DM]_b.j3d|XAxisMin:0.7|XAxisMax:2|YAxisMin:0.7|YAxisMax:2|ZAxisMin:0.7|ZAxisMax:2|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:True|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:A_Rock_a|Mode:QuickLinked|Filename:<1000>Data\World\Models\Ambient\stone - au\stone[3DM]_aAU.j3d|XAxisMin:1|XAxisMax:4|YAxisMin:1|YAxisMax:4|ZAxisMin:1|ZAxisMax:4|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:True|AlignByBoundingBox:True;
+Custom[@ObjType] = Name:A_Rock_b|Mode:QuickLinked|Filename:<1000>Data\World\Models\Ambient\stone - au\stone[3DM]_bAU.j3d|XAxisMin:1|XAxisMax:4|YAxisMin:1|YAxisMax:4|ZAxisMin:1|ZAxisMax:4|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:True|AlignByBoundingBox:True;
+Custom[@ObjType] = Name:O_Aborigenalfire|Mode:QuickLinked|Filename:<1000>Data\World\Models\Objects\aborigenalfire\aboriginalfire[3DM]_a.j3d|XAxisMin:1|XAxisMax:1|YAxisMin:1|YAxisMax:1|ZAxisMin:1|ZAxisMax:1|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:False|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:A_Stonesclu|Mode:QuickLinked|Filename:<1000>Data\World\Models\Ambient\stone - au\stoneclu[3DM]_au.j3d|XAxisMin:1|XAxisMax:4|YAxisMin:1|YAxisMax:4|ZAxisMin:1|ZAxisMax:4|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:True|AlignByBoundingBox:True;
+Custom[@ObjType] = Name:B_bridge_a|Mode:QuickLinked|Filename:<1000>Data\World\Models\Buildings\bridge - au\bridge[3DM]_aAU.j3d|XAxisMin:1|XAxisMax:1|YAxisMin:1|YAxisMax:1|ZAxisMin:1|ZAxisMax:1|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:False|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:z_render_fx|Mode:Linked|Filename:<1000>Data\World\CommonFX\RenderFX\Australia_Level.rfx|XAxisMin:1|XAxisMax:1|YAxisMin:1|YAxisMax:1|ZAxisMin:1|ZAxisMax:1|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:False|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:z_background|Mode:Linked|Filename:<1000>Data\World\CommonFX\Background\australia.bgr|XAxisMin:1|XAxisMax:1|YAxisMin:1|YAxisMax:1|ZAxisMin:1|ZAxisMax:1|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:True|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:A_Rock_c|Mode:QuickLinked|Filename:<1000>Data\World\Models\Ambient\stone - au\stone[3DM]_cAU.j3d|XAxisMin:1|XAxisMax:4|YAxisMin:1|YAxisMax:4|ZAxisMin:1|ZAxisMax:4|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:True|AlignByBoundingBox:True;
+Custom[@ObjType] = Name:V_Triodia|Mode:QuickLinked|Filename:<1000>Data\World\Models\Vegetation\Triodia\triodiacluwinter[3DM]_b.j3d|XAxisMin:0.7|XAxisMax:1|YAxisMin:0.7|YAxisMax:1|ZAxisMin:0.7|ZAxisMax:1|PropScale:True|RandomYMin:-0.2|RandomYMax:-0.2|AlignToGroundNormal:True|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:A_Temite_c|Mode:QuickLinked|Filename:<1000>Data\World\Models\Ambient\temite - au\temite[3DM]_c.j3d|XAxisMin:0.7|XAxisMax:2|YAxisMin:0.7|YAxisMax:2|ZAxisMin:0.7|ZAxisMax:2|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:True|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:O_Guard-rail_GA|Mode:QuickLinked|Filename:<1000>Data\World\Models\Objects\guardrail - ga\guardrail[3DM].j3d|XAxisMin:1|XAxisMax:1|YAxisMin:1|YAxisMax:1|ZAxisMin:1|ZAxisMax:1|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:False|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:CAR_CT22[3DM].j3d|Mode:Linked|Filename:<1000>Data\World\Models\Vehicles\trains\CT22[3DM].j3d|XAxisMin:1|XAxisMax:1|YAxisMin:1|YAxisMax:1|ZAxisMin:1|ZAxisMax:1|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:True|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:CAR_cargrey[3DM].j3d|Mode:Linked|Filename:<1000>Data\World\Models\Vehicles\Car\cargrey[3DM].j3d|XAxisMin:1|XAxisMax:1|YAxisMin:1|YAxisMax:1|ZAxisMin:1|ZAxisMax:1|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:True|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:CAR_carblue[3DM].j3d|Mode:Linked|Filename:<1000>Data\World\Models\Vehicles\Car\carblue[3DM].j3d|XAxisMin:1|XAxisMax:1|YAxisMin:1|YAxisMax:1|ZAxisMin:1|ZAxisMax:1|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:True|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:CAR_boxcarA[3DM].j3d|Mode:Linked|Filename:<1000>Data\World\Models\Vehicles\trains\boxcarA[3DM].j3d|XAxisMin:1|XAxisMax:1|YAxisMin:1|YAxisMax:1|ZAxisMin:1|ZAxisMax:1|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:True|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:CAR_boxcarB[3DM].j3d|Mode:Linked|Filename:<1000>Data\World\Models\Vehicles\trains\boxcarB[3DM].j3d|XAxisMin:1|XAxisMax:1|YAxisMin:1|YAxisMax:1|ZAxisMin:1|ZAxisMax:1|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:True|AlignByBoundingBox:False;
+Custom[@ObjType] = Name:CAR_gondola[3DM].j3d|Mode:Linked|Filename:<1000>Data\World\Models\Vehicles\trains\gondola[3DM].j3d|XAxisMin:1|XAxisMax:1|YAxisMin:1|YAxisMax:1|ZAxisMin:1|ZAxisMax:1|PropScale:True|RandomYMin:0|RandomYMax:0|AlignToGroundNormal:True|AlignByBoundingBox:False;
+Custom[comments] = Type your level description here;

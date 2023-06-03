@@ -1,0 +1,14 @@
+General {
+
+  Name        = Remington 700 CDL;
+  Action      = BoltRifle;
+  Ammo        = prsc3006b;
+  Scope       = Zeiss_Victory_Scope_6_24;
+  SkinCamo    = data\pre-made\skins\camo\wood5.jpg;
+  SkinDetail  = data\pre-made\skins\detail\boltrifle\magbolt[det2].png;
+  Reticle     = data\pre-made\reticles\rzv.png;
+  Calibration = 200.000000;
+  SkinIndex   = 1;
+  RangeFinder = TRUE;
+  ReadOnly    = TRUE;
+}

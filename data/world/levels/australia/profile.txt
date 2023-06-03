@@ -1,0 +1,49 @@
+//==============================================================================================================
+//==============================================================================================================
+
+//level general settings
+General {
+
+  //level name and comments
+  Name     = Australia;
+  Comments = Axis-Deer hunting in the Savannas in Australia;
+
+  //default frustum distance multiplier
+  FrustumMul = 1;
+
+  //world collision gap, in meters
+  WorldCollisionGap = 388;
+
+  //flag set if is an official map, by SLS
+  OfficialMap = TRUE;
+
+  //set which texturing layers will generate footstep sounds (GRASS, SAND, GRAVEL, ROCK, WATER and SNOW)
+  Footstep[ROCK]   = rock;
+  Footstep[GRAVEL] = gravel;
+  Footstep[SAND]   = soil, undertree_acacia, eucalyptus, callitris, road, no_dynamic;
+  Footstep[GRASS]  = undertree_acacia;
+
+  //prey (list of animal type or name)
+  Prey = Axis, Wallaroo, SandMonitor, WedgeTailedEagle, Platypus;
+
+  //weather type (SNOW or RAIN)
+  Weather = RAIN;
+
+  //allowed vehicles (ANIMAL, MOTOR, ALL or NONE)
+  Vehicles = ALL;
+
+  //ambient loop sound file
+  AmbientLoopSoundFile = Data\World\Sounds\Ambient\Australia.wav;
+
+  //seasons for this map
+  Seasons = Post-Rut;
+
+  //disable rubs on this map
+  DisableAnimalRubs = TRUE;
+
+  //animal feed layers
+  FeedLayers = soil, eucalyptus, callitris;
+
+  //train departures
+  TrainDepartures = 7:30, 8:30, 9:30, 10:30, 11:30, 12:30, 13:30, 14:30, 15:30, 16:30, 17:30;
+}

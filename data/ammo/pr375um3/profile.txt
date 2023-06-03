@@ -1,0 +1,83 @@
+//==============================================================================================================
+// .375 Rem Ultra Mag 300 grain (pr375um3)
+//==============================================================================================================
+
+//general item variables
+General {
+
+  Name     = pr375um3;
+  Type     = Ammo;
+  Useable  = FALSE;
+
+  Model  = Data\Ammo\Common\Models\7mm.j3d;
+  Model2 = Data\Ammo\Common\Models\7mm[ej].j3d;
+
+  Preloads = Data\Ammo\Common\Models\7mm[ej].j3d,
+             Data\Ammo\Common\Sounds\Shoot_RifleHigh1.wav,
+             Data\Ammo\Common\Sounds\Shoot_RifleHigh2.wav;
+
+  Icons = Data\Ammo\Common\Icons\375mag.tex;
+
+  //shake strengh
+  ShakeStrength = 12;
+
+  InterfaceScale = 10;
+}
+
+//ammo variables
+Ammo {
+
+  FlyingModel = Data\Ammo\Common\Models\7mm[fly].j3d;
+
+  SoundFire = Data\Ammo\Common\Sounds\Shoot_RifleHigh1.wav|Data\Ammo\Common\Sounds\Shoot_RifleHigh2.wav;
+
+  WeaponCompatibility = Autoloader|SingleShotRifle|PumpRifle|BoltRifle|LeverRifle;
+
+  //min/max calibration values accepted by this weapon item (in dcms)
+  MinCalibration = 500;
+  MaxCalibration = 3000;
+
+  //default calibration for this weapon (in dcms)
+  DefaultCalibration = 2000;
+
+  MaxRange     = 500; //meters
+
+  //ammo energy at def. calibration compared to deer primary killzone death: high >= fast > medium > slow >= low
+  Energy = high;
+ 
+  //spread angle (will be added to the ammunition spread angle)
+  SpreadAngle  = 0.025;
+
+  NoiseFXMinTime  = 1.5;
+  NoiseFXMaxTime  = 3;
+  NoiseFXStrength = 3;
+
+  //hit marks (radius in cm)
+  HitMarkRadius[Animal] = 20;
+  HitMarks[Animal] = Data\CommonFX\BulletMarks\Blood\HurtBullet.tex;
+  HitMarkRadius[Target] = 20;
+  HitMarks[Target] = Data\CommonFX\BulletMarks\Paper\Bullet.tex;
+
+  //energy of the shot in the form: [<distance(yards)>] = <energy>
+  AmmoEnergy[0]   = 5073;
+  AmmoEnergy[100] = 4178;
+  AmmoEnergy[200] = 3412;
+  AmmoEnergy[300] = 2759;
+  AmmoEnergy[400] = 2210;
+  AmmoEnergy[500] = 1757;
+
+  //drop of ammunition shot in the form: [<distance(yards)>] = <inches>
+  AmmoDrop[50]   = -0.3;
+  AmmoDrop[100]  = -2.0;
+  AmmoDrop[150]  = -1.8;
+  AmmoDrop[200]  = 0;
+  AmmoDrop[250]  = 3.5;
+  AmmoDrop[300]  = 8.8;
+  AmmoDrop[400]  = 26.1;
+  AmmoDrop[500]  = 53.9;
+
+  //penetration of ammunition shot in the form: [<distance(meters)>] = <depth(cm)>
+  AmmoPenetration[0]   = 55;
+  AmmoPenetration[50]  = 25;
+  AmmoPenetration[500] = 10;
+}

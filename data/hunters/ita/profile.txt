@@ -1,0 +1,12 @@
+//==============================================================================================================
+// Hunter Model (Mod by ita)
+//==============================================================================================================
+
+Model {
+
+  Name       = Ita;
+  Gender     = MALE;
+  File       = Data\Hunters\Ita\Ita.j3d;
+  AnimFolder = Data\Hunters\Ita\Anim;
+  HandsSkin  = Data\Hunters\Common\Hands\Tex\hands.tex;
+}

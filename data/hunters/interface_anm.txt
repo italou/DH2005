@@ -1,0 +1,14 @@
+lista de animações - com repetição (1x)
+
+compartilhadas
+
+INT_male_generic_1   30-110
+INT_male_generic_2   25-60
+INT_female_generic_2 20-111
+INT_female_generic_1 20-120
+
+
+específicas
+
+INT_taunt_fred       24-100
+INT_taunt_ita        24-100

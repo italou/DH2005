@@ -1,0 +1,166 @@
+//==============================================================================================================
+// Pump Rifle
+//==============================================================================================================
+
+//general item variables
+General {
+
+  Name     = PumpRifle;
+  Type     = Weapon;
+  Useable  = TRUE;
+
+  //multiplayer item category
+  MultiplayerCategory = Rifles;
+
+  Helper = @Weapon;
+  Model  = Data\Weapons\Common\Models\PumpRifle.j3d;
+
+  AnimFolder = Data\Weapons\PumpRifle\Anim;
+
+  Preloads = Data\Weapons\Common\Sounds\DryShot.wav,
+             Data\Weapons\Common\Sounds\Pump.wav,
+             Data\Weapons\Common\Sounds\InsertBullet.wav,
+             Data\Weapons\Common\Models\Support.j3d,
+             Data\Weapons\Common\ShootFX\RifleSmoke.par;
+
+  //minimum time between two uses of this item, in seconds
+  UseLatency = 0.8;
+
+  //how is the field-of-view when aiming this item
+  AimFOV = 52;
+
+  //shot many seconds to start/stop aiming this item
+  AimSecs = 0.75;
+
+  //adjust arms when aiming item variables
+  AdjustWhenAimingBothArmsAmount = 0.88;
+  AdjustWhenAimingRightArmAmount = 0.55;
+  AdjustWhenAimingLeftArmAmount  = 1;
+
+  //shake strengh
+  ShakeStrength = 15;
+
+  //scope class for compatible scopes/items
+  ScopeClass = RifleScope;
+
+  //add the items icons
+  Icons = Data\Weapons\Common\Icons\Pump_Rifle_glow.tex,
+          Data\Weapons\Common\Icons\Pump_Rifle.tex,
+          Data\Weapons\Common\Icons\Pump_Rifle_scope_glow.tex,
+          Data\Weapons\Common\Icons\Pump_Rifle_scope.tex,
+          Data\Weapons\Common\Icons\Pump_Rifle_thermal_glow.tex,
+          Data\Weapons\Common\Icons\Pump_Rifle_thermal.tex;
+
+
+
+  MorphFilename[AIM]    = Data\Hunters\Common\Anim\weapon_aim.mtg;
+  MorphFilename[SHOOT]  = Data\Hunters\Common\Anim\weapon_shoot.mtg;
+  MorphFilename[RELOAD] = Data\Hunters\Common\Anim\reload.mtg;
+}
+
+//weapon variables
+Weapon {
+
+  //spread angle (will be added to the ammunition spread angle)
+  SpreadAngle = 0.01;
+
+  //max bullets
+  MaxLoad = 6;
+
+  //scope support helper for this weapon 
+  ScopeHelper = @scope;
+
+  //scope support for this weapon 
+  ScopeSupport = Data\Weapons\Common\Models\Support.j3d;
+
+  //skins with minimal weapon bonus to use and glossiness to be applied
+  Skins = Data\Weapons\Common\Models\Tex\pumprif[dif1].tex = 0   35,
+          Data\Weapons\Common\Models\Tex\pumprif[dif2].tex = 0   35,
+          Data\Weapons\Common\Models\Tex\pumprif[dif3].tex = 0   35,
+          Data\Weapons\Common\Models\Tex\pumprif[difg].tex = 100 90;
+  
+  //skins icons
+  SkinIcons = Data\Weapons\Common\Icons\m_black.tex,
+              Data\Weapons\Common\Icons\m_wornsteel.tex,
+              Data\Weapons\Common\Icons\m_steel2.tex,
+              Data\Weapons\Common\Icons\m_gold.tex;
+  
+  //using detail and camo texture
+  UseDetailTexture = TRUE;
+  UseCamoTexture   = TRUE;
+  
+  //weapon weight [1..3]
+  Weight = 2;
+}
+
+//called when user wants to fire
+ISL[USE] {
+
+    IfNotVarGoto(CURRENT_BULLETS, DRY_SHOT);
+
+    PlayBones(shoot.skl, 30);
+
+    LinkObject(Data\Weapons\Common\ShootFX\RifleSmoke.par, @smoke, , FALSE, FALSE);
+    PlaySound(SOUND_SHOOT, 0.95, 1);
+
+    Event(FIRE);
+    Event(USE_BULLET);
+
+    //pump 
+    WaitBonesFrame(20);
+    PlaySound(Data\Weapons\Common\Sounds\Pump.wav);
+    PlaySyncJ3D(pump, 20, 28);
+    WaitBonesFrame(28);
+    EjectObject(MODEL_BULLET_EJECT, @bullet_pump, @bullet_pump, 16, 0.5, 30, 1.6, TRUE);
+    PlaySyncJ3D(pump, 28, 36, TRUE);
+
+    WaitBonesFrame(50);
+    EndScript();
+
+  DRY_SHOT:
+
+    PlaySound(Data\Weapons\Common\Sounds\DryShot.wav);
+    Event(DRY_FIRE);
+    EndScript();
+}
+
+//called when reloading the weapon
+ISL[RELOAD] {
+
+    IfVarsEqualGoto(CURRENT_BULLETS, MAX_BULLETS, FULL_OF_BULLETS);
+    
+    PlayBones(reload.skl, 30);
+   
+    WaitBonesFrame(20);
+
+  REPLAY_BULLET:
+
+    LinkObject(MODEL_BULLET, @bullet, , TRUE);
+
+    //drop the bullet
+    WaitBonesFrame(30);
+    PlaySound(Data\Weapons\Common\Sounds\InsertBullet.wav);
+    Event(NEW_BULLET);
+    UnlinkObject(MODEL_BULLET, TRUE);
+    Increase(CURRENT_BULLETS);
+
+    //wait end of loop
+    WaitBonesFrame(44);
+    IfVarsEqualGoto(CURRENT_BULLETS, MAX_BULLETS, PUMP);
+    
+    SetBonesFrame(17);
+    Goto(REPLAY_BULLET);
+    
+  PUMP:
+
+    WaitBonesFrame(51);
+    PlaySound(Data\Weapons\Common\Sounds\Pump.wav);
+    PlaySyncJ3D(pump, 51, 57);
+    WaitBonesFrame(57);
+    PlaySyncJ3D(pump, 57, 63, TRUE);
+    
+  FULL_OF_BULLETS:
+
+    WaitBonesFrame(86);
+    EndScript();
+}

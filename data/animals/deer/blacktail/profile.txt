@@ -1,0 +1,1076 @@
+//==============================================================================================================
+// Blacktail (Mod by ita)
+//==============================================================================================================
+
+General {
+
+  Name         = Blacktail;
+  Type         = Deer;
+  IsTrophy     = TRUE;
+  IllegalKill  = FALSE;
+  Dangerous    = FALSE;
+  AllowRespawn = FALSE;
+  AllowFreeze  = FALSE;
+  HeatAnimal   = TRUE;
+
+  Preloads = Data\Animals\Deer\Blacktail\Antlers\*.j3d,
+             Data\Animals\Deer\Common\FootstepMarks\*.lay,
+             Data\Animals\Deer\Common\Scats\*.j3d,
+             Data\Animals\Deer\Common\Sounds\Footsteps\*.wav,
+             Data\Animals\Deer\Common\Sounds\Antlers\*.wav,
+             Data\Animals\Deer\Common\Sounds\*.wav,
+             Data\Animals\Deer\Common\Stickers\*.tex;
+
+  AlertSound[MALE] = Data\Animals\Deer\Common\Sounds\BuckAlert.wav;
+
+  Models[MALE]   = Data\Animals\Deer\Blacktail\Male\Male.j3d     = 100%;
+  Models[FEMALE] = Data\Animals\Deer\Blacktail\Female\Female.j3d = 99.967%,
+                   Data\Animals\Deer\Blacktail\WTD_Toon\WTD_Female_Cartoon.j3d = 0.033%;
+  Models[FAWN]   = Data\Animals\Deer\Blacktail\Fawn\Fawn.j3d     = 100%;
+
+  Ragdoll[MALE]   = Data\Animals\Deer\Blacktail\Male\Male.rag;
+  Ragdoll[FEMALE] = Data\Animals\Deer\Blacktail\Female\Female.rag;
+  Ragdoll[FAWN]   = Data\Animals\Deer\Blacktail\Fawn\Fawn.rag;
+
+  //define skins used for blend. Will choose 2 of them to make a blend.
+  Skins[MALE]   = Data\Animals\Deer\Blacktail\Skins\Skin1 = 32.49%,
+                  Data\Animals\Deer\Blacktail\Skins\Skin2 = 32.49%,
+                  Data\Animals\Deer\Blacktail\Skins\Skin3 = 32.49%,
+                  Data\Animals\Deer\Blacktail\Skins\Skin_Pie = 2.50%,
+                  Data\Animals\Deer\Whitetail\Skins\Skin_Alb = 0.02%,
+                  Data\Animals\Deer\Blacktail\Skins\Skin_Mel = 0.01%;
+  Skins[FEMALE] = Data\Animals\Deer\Blacktail\Skins\Skin1 = 32.49%,
+                  Data\Animals\Deer\Blacktail\Skins\Skin2 = 32.49%,
+                  Data\Animals\Deer\Blacktail\Skins\Skin3 = 32.49%,
+                  Data\Animals\Deer\Blacktail\Skins\Skin_Pie = 2.50%,
+                  Data\Animals\Deer\Whitetail\Skins\Skin_Alb = 0.02%,
+                  Data\Animals\Deer\Blacktail\Skins\Skin_Mel = 0.01%;
+  Skins[FAWN]   = Data\Animals\Deer\Blacktail\Skins\Fawn\Fawn1 = 49.74%,
+                  Data\Animals\Deer\Blacktail\Skins\Fawn\Fawn2 = 49.73%,
+                  Data\Animals\Deer\Blacktail\Skins\Skin_Pie = 0.50%,
+                  Data\Animals\Deer\Whitetail\Skins\Skin_Alb = 0.02%,
+                  Data\Animals\Deer\Blacktail\Skins\Skin_Mel = 0.01%;
+
+  //material name to change the skins
+  SkinMaterial    = Corpo;
+  FurSkinMaterial = Orelhas e Rabo;
+
+  AnimFolder[MALE]   = Data\Animals\Deer\Common\Anim\Male;
+  AnimFolder[FEMALE] = Data\Animals\Deer\Common\Anim\Female;
+  AnimFolder[FAWN]   = Data\Animals\Deer\Common\Anim\Fawn;
+
+  MorphFolder[MALE]   = Data\Animals\Deer\Common\MorphTarget;
+  MorphFolder[FEMALE] = Data\Animals\Deer\Common\MorphTarget;
+  MorphFolder[FAWN]   = Data\Animals\Deer\Common\MorphTarget;
+
+  //vertical offset from pivot to mouth while standing (cm)
+  StandMouthOffsetY[MALE]   = 143;
+  StandMouthOffsetY[FEMALE] = 136;
+  StandMouthOffsetY[FAWN]   = 87;
+
+  //horizontal offset from the pivot to the mouth while standing (cm)
+  StandMouthOffsetZ[MALE]   = -27;
+  StandMouthOffsetZ[FEMALE] = -45;
+  StandMouthOffsetZ[FAWN]   = -32;
+
+  //use path nodes
+  UsePathNodes = TRUE;
+
+  //scrape sounds
+  ScrapeSounds = Data\Animals\Deer\Common\Sounds\Antlers\Rub1.wav,
+                 Data\Animals\Deer\Common\Sounds\Antlers\Rub2.wav,
+                 Data\Animals\Deer\Common\Sounds\Antlers\Rub3.wav,
+                 Data\Animals\Deer\Common\Sounds\Antlers\Rub4.wav,
+                 Data\Animals\Deer\Common\Sounds\Antlers\Rub5.wav;
+
+  //maximum width for ragdoll head
+  MaxRagdollHeadWidth = 8;
+  
+  //maximum height for ragdoll head
+  MaxRagdollHeadHeight = 3.1;
+
+  //pivot to rub position (head + antlers) in cm
+  RubsDist = 110;
+}
+
+Size {
+
+  Weight[MALE]   = 80, 175;
+  Weight[FEMALE] = 55, 105;
+  Weight[FAWN]   = 30, 45;
+
+  ModelScale[MALE]   = 0.84, 1.01;
+  ModelScale[FEMALE] = 0.86, 1.03;
+  ModelScale[FAWN]   = 0.86, 1.03;
+
+}
+
+Senses {
+
+  ViewAngle = 180;
+  Sight     = 0.9;
+  Smell     = 1.00;
+  Hearing   = 0.95;
+}
+
+//write here the common behavior values for all seasons
+Behavior {
+
+  //note: will also fear dead animals of the same type
+  Fear = Hunter, Horse, Vehicle, Blind, Tripod, TreeStand;
+
+  AvoidWater = ESCAPING;
+
+  //distance each sense will start fleeing when a fear agent is detected, in meters
+  SightFleeDistance = 60;
+  SmellFleeDistance = 40;
+  HearFleeDistance  = 15;
+
+  //min and max time each sense will blackout when the animal becomes in "alert" status, in seconds
+  //(the exact blackout time will interpolate min/max according animal score value)
+  MinSenseBlackoutTime = 1.5;
+  MaxSenseBlackoutTime = 3;
+
+  //min and max fleeing time, in seconds (the value will be randomized)
+  MinFleeingTime = 30;
+  MaxFleeingTime = 40;
+
+  //min and max alert time, in seconds (the value will be randomized)
+  MinAlertTime = 15;
+  MaxAlertTime = 20;
+
+  //min/max time to change current move direction according animal status, in seconds
+  ChangeMoveDirMinTime[UNAWARE]   = 10;
+  ChangeMoveDirMaxTime[UNAWARE]   = 20;
+  ChangeMoveDirMinTime[ALERT]     = 10;
+  ChangeMoveDirMaxTime[ALERT]     = 15;
+  ChangeMoveDirMinTime[FLEEING]   = 2;
+  ChangeMoveDirMaxTime[FLEEING]   = 6;
+  ChangeMoveDirMinTime[ATTACKING] = 2;
+  ChangeMoveDirMaxTime[ATTACKING] = 4;
+
+  //min/max time to change current move speed when unaware, in seconds
+  ChangeMoveSpeedUnawareMinTime = 5;
+  ChangeMoveSpeedUnawareMaxTime = 20;
+
+  //noise behavior settings
+  NoiseBehaviorSpeed[HEAD_NOISE_YAW]   = 0.5;
+  NoiseBehaviorSpeed[HEAD_NOISE_PITCH] = 0.5;
+  NoiseBehaviorSpeed[USE_HEAD_NOISE]   = 0.2;
+  NoiseBehaviorSpeed[EAR_RIGHT]        = 0.2;
+  NoiseBehaviorSpeed[EAR_LEFT]         = 0.2;
+  NoiseBehaviorSpeed[TAIL_ROLL]        = 0.1;
+  NoiseBehaviorSpeed[LICK]             = 0.1;
+  NoiseBehaviorSpeed[LICK_DIR]         = 1.0;
+  NoiseBehaviorSpeed[RUMINATE]         = 0.1;
+  NoiseBehaviorSpeed[BLINK]            = 0.4;
+  NoiseBehaviorSpeed[BLINK_SYNC]       = 1.0;
+  NoiseBehaviorSpeed[GALLOP_JUMP]      = 5.0;
+  NoiseBehaviorSpeed[SCRAPE]           = 0.01;
+  NoiseBehaviorSpeed[SCRAPE_COUNT]     = 0.5;
+  NoiseBehaviorSpeed[SCRATCH_EAR]      = 0.01;
+  NoiseBehaviorSpeed[SCRATCH_EAR_DIR]  = 1.0;
+  NoiseBehaviorSpeed[SMELL]            = 0.05;
+  NoiseBehaviorSpeed[SMELL_TIME]       = 0.5;
+  NoiseBehaviorSpeed[EAT]              = 0.1;
+  NoiseBehaviorSpeed[EAT_COUNT]        = 0.5;
+  NoiseBehaviorSpeed[DRINK]            = 0.1;
+  NoiseBehaviorSpeed[DRINK_COUNT]      = 0.5;
+  NoiseBehaviorSpeed[LAY]              = 0.2;
+  NoiseBehaviorSpeed[LAY_TIME]         = 0.5;
+  NoiseBehaviorSpeed[SEARCH_AREA]      = 0.02;
+
+  //default moving amount per gender, according time of day 
+  //(these values will be overrided by season specific moving amount)
+  MovingAmount[DAWN][MALE]   = STOP:0.4, WALK:0.35, TROT:0.1, STOT:0.1, GALLOP_SLOW:0.05, GALLOP_FAST:0.0;
+  MovingAmount[MORN][MALE]   = STOP:0.7, WALK:0.2,  TROT:0.05, STOT:0.05, GALLOP_SLOW:0.0,  GALLOP_FAST:0.0;
+  MovingAmount[NOON][MALE]   = STOP:0.7, WALK:0.2,  TROT:0.05, STOT:0.05, GALLOP_SLOW:0.0,  GALLOP_FAST:0.0;
+  MovingAmount[DUSK][MALE]   = STOP:0.4, WALK:0.35, TROT:0.1, STOT:0.1, GALLOP_SLOW:0.05, GALLOP_FAST:0.0;
+  MovingAmount[DAWN][FEMALE] = STOP:0.4, WALK:0.35, TROT:0.1, STOT:0.1, GALLOP_SLOW:0.05, GALLOP_FAST:0.0;
+  MovingAmount[MORN][FEMALE] = STOP:0.7, WALK:0.2,  TROT:0.05, STOT:0.05, GALLOP_SLOW:0.0,  GALLOP_FAST:0.0;
+  MovingAmount[NOON][FEMALE] = STOP:0.7, WALK:0.2,  TROT:0.05, STOT:0.05, GALLOP_SLOW:0.0,  GALLOP_FAST:0.0;
+  MovingAmount[DUSK][FEMALE] = STOP:0.4, WALK:0.35, TROT:0.1, STOT:0.1, GALLOP_SLOW:0.05, GALLOP_FAST:0.0;
+  MovingAmount[DAWN][FAWN]   = STOP:0.1, WALK:0.4,  TROT:0.2, STOT:0.2, GALLOP_SLOW:0.1,  GALLOP_FAST:0.0;
+  MovingAmount[MORN][FAWN]   = STOP:0.3, WALK:0.2,  TROT:0.2, STOT:0.2, GALLOP_SLOW:0.1,  GALLOP_FAST:0.0;
+  MovingAmount[NOON][FAWN]   = STOP:0.3, WALK:0.2,  TROT:0.2, STOT:0.2, GALLOP_SLOW:0.1,  GALLOP_FAST:0.0;
+  MovingAmount[DUSK][FAWN]   = STOP:0.1, WALK:0.4,  TROT:0.2, STOT:0.2, GALLOP_SLOW:0.1,  GALLOP_FAST:0.0;
+
+  //time of day the animal moves to the woods
+  MoveToWoodsTime = MORN, NOON;
+
+  //time of day the animal goes to drink (doesn't work if animal is set to always avoid the water)
+  MoveToWaterTime = DUSK;
+
+  //time of day the animal will rest
+  LayTime = MORN, NOON;
+
+  //lay min/max duration, in seconds
+  LayMinDuration = 30;
+  LayMaxDuration = 120;
+
+  //time of day the animal will eat
+  EatTime = DAWN, DUSK;
+
+  //max time to be on water per time of day, in seconds
+  MaxTimeOnWater = 30;
+
+  //max continuous time on water, in seconds
+  MaxContinuousTimeOnWater = 8;
+}
+
+//write here values to override the default behavior when in the PRE-RUT season
+Behavior[PRE-RUT] {}
+
+//write here values to override the default behavior when in the RUT season
+Behavior[RUT] {
+
+  MovingAmount[MORN][MALE]   = STOP:0.5, WALK:0.3,  TROT:0.1, STOT:0.1, GALLOP_SLOW:0.0,  GALLOP_FAST:0.0;
+  MovingAmount[NOON][MALE]   = STOP:0.5, WALK:0.3,  TROT:0.1, STOT:0.1, GALLOP_SLOW:0.0,  GALLOP_FAST:0.0;
+}
+
+//write here values to override the default behavior when in the POST-RUT season
+Behavior[POST-RUT] {
+
+  MovingAmount[DAWN][MALE]   = STOP:0.45, WALK:0.45, TROT:0.05, STOT:0.05, GALLOP_SLOW:0.0,  GALLOP_FAST:0.0;
+  MovingAmount[MORN][MALE]   = STOP:0.65, WALK:0.3,  TROT:0.05, STOT:0.05, GALLOP_SLOW:0.0,  GALLOP_FAST:0.0;
+  MovingAmount[NOON][MALE]   = STOP:0.65, WALK:0.3,  TROT:0.05, STOT:0.05, GALLOP_SLOW:0.0,  GALLOP_FAST:0.0;
+  MovingAmount[DUSK][MALE]   = STOP:0.45, WALK:0.45, TROT:0.05, STOT:0.05, GALLOP_SLOW:0.0,  GALLOP_FAST:0.0;
+  MovingAmount[DAWN][FEMALE] = STOP:0.45, WALK:0.45, TROT:0.05, STOT:0.05, GALLOP_SLOW:0.0,  GALLOP_FAST:0.0;
+  MovingAmount[MORN][FEMALE] = STOP:0.65, WALK:0.3,  TROT:0.05, STOT:0.05, GALLOP_SLOW:0.0,  GALLOP_FAST:0.0;
+  MovingAmount[NOON][FEMALE] = STOP:0.65, WALK:0.3,  TROT:0.05, STOT:0.05, GALLOP_SLOW:0.0,  GALLOP_FAST:0.0;
+  MovingAmount[DUSK][FEMALE] = STOP:0.45, WALK:0.45, TROT:0.05, STOT:0.05, GALLOP_SLOW:0.0,  GALLOP_FAST:0.0;
+}
+
+//write here the common grouping values for all seasons
+Grouping {
+
+  CreateOnWater         = FALSE;
+  MinWaterHeightAllowed = 0.5;
+  MinWaterHeightDesired = 1;
+}
+
+//write here values to override the default grouping when in the PRE-RUT season
+Grouping[PRE-RUT] {
+
+  Radius[MALE]   = 40;
+  Radius[FEMALE] = 30;
+  Radius[FAWN]   = 10;
+
+  GroupChance[ONE]   = .09;
+  Group[ONE][MALE]   = 1, 1;
+  Group[ONE][FEMALE] = 0, 0;
+  Group[ONE][FAWN]   = 0, 0;
+
+  GroupChance[TWO]   = .79;
+  Group[TWO][MALE]   = 0, 0;
+  Group[TWO][FEMALE] = 1, 1;
+  Group[TWO][FAWN]   = 0, 2;
+
+  GroupChance[THREE]   = .12;
+  Group[THREE][MALE]   = 2, 3;
+  Group[THREE][FEMALE] = 0, 0;
+  Group[THREE][FAWN]   = 0, 0;
+}
+
+//write here values to override the default grouping when in the RUT season
+Grouping[RUT] {
+
+  Radius[MALE]   = 20;
+  Radius[FEMALE] = 20;
+  Radius[FAWN]   = 10;
+
+  GroupChance[ONE]   = .17;
+  Group[ONE][MALE]   = 1, 1;
+  Group[ONE][FEMALE] = 0, 0;
+  Group[ONE][FAWN]   = 0, 0;
+
+  GroupChance[TWO]   = .52;
+  Group[TWO][MALE]   = 0, 0;
+  Group[TWO][FEMALE] = 1, 1;
+  Group[TWO][FAWN]   = 0, 2;
+
+  GroupChance[THREE]   = .16;
+  Group[THREE][MALE]   = 0, 0;
+  Group[THREE][FEMALE] = 0, 0;
+  Group[THREE][FAWN]   = 1, 1;
+
+  GroupChance[FOUR]   = .15;
+  Group[FOUR][MALE]   = 1, 1;
+  Group[FOUR][FEMALE] = 1, 1;
+  Group[FOUR][FAWN]   = 0, 0;
+}
+
+//write here values to override the default grouping when in the POST-RUT season
+Grouping[POST-RUT] {
+
+  Radius[MALE]   = 40;
+  Radius[FEMALE] = 30;
+  Radius[FAWN]   = 10;
+
+  GroupChance[ONE]   = .07;
+  Group[ONE][MALE]   = 0, 1;
+  Group[ONE][FEMALE] = 1, 2;
+  Group[ONE][FAWN]   = 0, 2;
+
+  GroupChance[TWO]   = .13;
+  Group[TWO][MALE]   = 2, 4;
+  Group[TWO][FEMALE] = 0, 0;
+  Group[TWO][FAWN]   = 0, 0;
+
+  GroupChance[THREE]   = .69;
+  Group[THREE][MALE]   = 0, 0;
+  Group[THREE][FEMALE] = 1, 2;
+  Group[THREE][FAWN]   = 0, 3;
+
+  GroupChance[FOUR]   = .07;
+  Group[FOUR][MALE]   = 1, 1;
+  Group[FOUR][FEMALE] = 0, 0;
+  Group[FOUR][FAWN]   = 0, 0;
+
+  GroupChance[FIVE]   = .04;
+  Group[FIVE][MALE]   = 0, 0;
+  Group[FIVE][FEMALE] = 0, 0;
+  Group[FIVE][FAWN]   = 1, 1;
+}
+
+Physics {
+
+  Velocity[STOP]        = 0;
+  Velocity[WALK]        = 3.6;
+  Velocity[TROT]        = 4.7;
+  Velocity[GALLOP_SLOW] = 14.5;
+  Velocity[GALLOP_FAST] = 34;
+
+  Acceleration = 10;
+  Friction     = 6;
+
+  HeightAdjust[MALE]   = -7.9;
+  HeightAdjust[FEMALE] = -7.3;
+  HeightAdjust[FAWN]   = -6.8;
+
+  MaxMoveAngle = 30;
+
+  AlwaysOnGround    = TRUE;
+  AlignToGround     = TRUE;
+  GroundAlignFactor = 0.5;
+
+  RollFXFactor = 0.3;
+
+  //radius and height of the animal, in meters
+  BodyRadius = 0.75;
+  BodyHeight = 2;
+
+  MaxObstacleHeight = 1;
+
+  //height while animal is rubbing (m)
+  RubHeight = 0.8;
+
+  //respulsion bones for other bodies (list with: <bone name>:<radius(cm)> <offset y(cm)>)
+  RepulsionBones[MALE]   = Spine1 = 25 15,
+                           Spine3 = 25 16,
+                           Spine6 = 25 13,
+                           Neck2  = 20 10,
+                           Head   = 20 11;
+  RepulsionBones[FEMALE] = Spine1 = 23 15,
+                           Spine3 = 23 14,
+                           Spine6 = 23 14,
+                           Neck2  = 18 7,
+                           Head   = 18 8;
+  RepulsionBones[FAWN]   = Spine1 = 16 9,
+                           Spine3 = 16 9,
+                           Spine6 = 16 9,
+                           Neck2  = 12 4,
+                           Head   = 14 5;
+}
+
+Animation {
+
+  //frames per second of each animation
+  FPS[WALK]              = 30;
+  FPS[TROT]              = 30;
+  FPS[GALLOP_SLOW]       = 30;
+  FPS[GALLOP_FAST]       = 30;
+  FPS[GALLOP_JUMP]       = 30;
+  FPS[SWIM]              = 30;
+  FPS[STOP]              = 30;
+  FPS[STOT]              = 30;
+  FPS[LAY]               = 30;
+  FPS[LAY_STOP]          = 30;
+  FPS[EAT]               = 30;
+  FPS[DRINK]             = 30;
+  FPS[SCRAPE]            = 25;
+  FPS[SCRATCH_RIGHT_EAR] = 20;
+  FPS[SCRATCH_LEFT_EAR]  = 20;
+  FPS[FIGHT_FORWARD]     = 30;
+  FPS[FIGHT_BACKWARD]    = 30;
+  FPS[FIGHT_SIDE]        = 30;
+  FPS[DIE_PRI]           = 30;
+  FPS[DIE_SEC]           = 30;
+  FPS[DIE_OUT]           = 30;
+  FPS[EAT_STAND_IN]      = 30;
+  FPS[EAT_STAND_OUT]     = 30;
+  FPS[EAT_STAND_1]       = 30;
+  FPS[EAT_STAND_2]       = 30;
+  FPS[KICK_1]            = 30;
+  FPS[KICK_2]            = 30;
+
+  //flag set to use gallop jump animation
+  UseGallopJump = TRUE;
+
+  //flag set to sync eyes blink
+  SyncEyesBlink = FALSE;
+
+  //wounded animations
+  WoundedAnimInfo[WALK]              = 15, 0.8;
+  WoundedAnimBone[WALK][REAR_LEFT]   = LR Thigh, 22;
+  WoundedAnimBone[WALK][REAR_RIGHT]  = RR Thigh,  7;
+  WoundedAnimBone[WALK][FRONT_LEFT]  = LF Thigh, 26;
+  WoundedAnimBone[WALK][FRONT_RIGHT] = RF Thigh, 11;
+  WoundedAnimInfo[TROT]              = 12, 0.8;
+  WoundedAnimBone[TROT][REAR_LEFT]   = LR Thigh,  6;
+  WoundedAnimBone[TROT][REAR_RIGHT]  = RR Thigh, 18;
+  WoundedAnimBone[TROT][FRONT_LEFT]  = LF Thigh, 20;
+  WoundedAnimBone[TROT][FRONT_RIGHT] = RF Thigh,  9;
+}
+
+Skeleton {
+
+  //bone areas
+  Bones[HEAD]         = neck3, head;
+  Bones[NECK]         = neck1, neck2;
+  Bones[LUNGS]        = lf clavicle, rf clavicle, lf thigh, rf thigh;
+  Bones[ABDOMEN]      = rr thigh, lr thigh;
+  Bones[LFRONT_LEG]   = lf clavicle, lf thigh, lf calf, lf foot, lf toe;
+  Bones[RFRONT_LEG]   = rf clavicle, rf thigh, rf calf, rf foot, rf toe;
+  Bones[LBACK_LEG]    = lr thigh, lr calf, lr foot, lr toe;
+  Bones[RBACK_LEG]    = rr thigh, rr calf, rr foot, rr toe;
+  Bones[HINDQUARTERS] = spine, spine1;
+  Bones[SPINE]        = spine2, spine3, spine4, spine5, spine6;
+  Bones[L_EAR]        = l ear;
+  Bones[R_EAR]        = r ear;
+  Bones[TAIL]         = tail1, tail2, tail3;
+  Bones[SHOT_IGNORE]  = r ear, l ear, tail1, tail2, tail3;
+  
+  //head movement configuration
+  HeadMoveBones        = neck1, neck2, neck3, head;
+  HeadMovePitchFactors =   1.0,   0.0,   0.0,  0.0;
+  HeadMoveYawFactors   =   0.1,   0.2,   0.3,  0.4;
+  HeadMoveRollFactors  =   0.1,   0.2,   0.3,  0.4;
+  HeadMoveMinPitch     = -15;
+  HeadMoveMaxPitch     =  60;
+  HeadMoveMinYaw       = -90;
+  HeadMoveMaxYaw       =  90;
+
+  //kick animation bones
+  KickBones = lr thigh, lr calf, rr thigh, rr calf, spine2, spine3, spine4, spine, spine1, tail1;
+  
+  //smelling move config
+  SmellingSpeed = 10;
+  SmellingAngle = 8;
+  
+  //tail animation settings
+  TailMoveBones        = tail1, tail2, tail3;
+  TailMovePitchFactors = 0.5,     0.3,   0.2;
+  TailMoveRollFactors  = 0.5,     0.3,   0.2;
+  TailRollSpeed        = 4;
+  TailRollAngle        = 90;
+  
+  //spine animation settings
+  SpineMoveBones      = spine, spine1, spine2, spine3, spine4, spine5, spine6;
+  SpineMoveYawFactors =   0.0,    0.1,    0.2,    0.4,    0.2,    0.1,    0.0;
+  
+  //add this rotation to ears when animal has heard a noise
+  HearNoiseEarYaw = 50;
+
+  //add these rotation to ears when has animal antler
+  AntlerEarPitch = 0;
+  AntlerEarYaw   = -50;
+  AntlerEarRoll  = -30;
+}
+
+KillZones {
+
+  //fill with resistence of a bullet energy, NEVER or ALWAYS values:
+
+  FastDeath[MALE][PRI] = 1900;
+  SlowDeath[MALE][PRI] = 1500;
+  FastDeath[MALE][SEC] = 3500;
+  SlowDeath[MALE][SEC] = 2000;
+  FastDeath[MALE][OUT] = 7000;
+  SlowDeath[MALE][OUT] = 3500;
+
+  FastDeath[FEMALE][PRI] = 1900;
+  SlowDeath[FEMALE][PRI] = 1500;
+  FastDeath[FEMALE][SEC] = 3500;
+  SlowDeath[FEMALE][SEC] = 2000;
+  FastDeath[FEMALE][OUT] = 7000;
+  SlowDeath[FEMALE][OUT] = 3500;
+
+  FastDeath[FAWN][PRI] = 1700;
+  SlowDeath[FAWN][PRI] = 1300;
+  FastDeath[FAWN][SEC] = 2800;
+  SlowDeath[FAWN][SEC] = 1800;
+  FastDeath[FAWN][OUT] = 5600;
+  SlowDeath[FAWN][OUT] = 2800;
+
+  SlowDeathMinSecs = 10;
+  SlowDeathMaxSecs = 30;
+}
+
+Tracks {
+
+  FootstepMarks            = Data\Animals\Deer\Common\FootstepMarks\Footstep.lay;
+  FootstepSoundsFolder     = Data\Animals\Deer\Common\Sounds\Footsteps\;
+  FootstepSoundsVariations = 2;
+
+  DroppingFiles  = Data\Animals\Deer\Common\Scats\Single.j3d,
+                   Data\Animals\Deer\Common\Scats\Cluster.j3d,
+                   Data\World\Models\Animals\fly.j3d;
+  MinDropPerLoad = 3;
+  MaxDropPerLoad = 5;
+  MinDropMinutes = 20;
+  MaxDropMinutes = 30;
+
+  ScrapeMarks = Data\Animals\Deer\Common\Scrapes\ScrapeMark.lay;
+
+  FootstepFrames[WALK]           = 1, 16;
+  FootstepFrames[TROT]           = 1, 13;
+  FootstepFrames[GALLOP_SLOW]    = 18;
+  FootstepFrames[GALLOP_FAST]    = 18;
+  FootstepFrames[GALLOP_JUMP]    = 40;
+  FootstepFrames[STOT]           = 18;
+  FootstepFrames[SCRAPE]         = 12;
+  FootstepFrames[FIGHT_FORWARD]  = 10, 22;
+  FootstepFrames[FIGHT_BACKWARD] = 7, 14, 18, 24;
+  FootstepFrames[FIGHT_SIDE]     = 7, 13, 19;
+
+  DustFXFrames[GALLOP_SLOW] = 18;
+  DustFXFrames[GALLOP_FAST] = 18;
+  DustFXFrames[GALLOP_JUMP] = 40;
+  DustFXFrames[STOT]        = 18;
+  DustFXFrames[SCRAPE]      = 12;
+
+  BreathFrames[WALK]           = 21;
+  BreathFrames[TROT]           = 16;
+  BreathFrames[GALLOP_SLOW]    = 17;
+  BreathFrames[SWIM]           = 10;
+  BreathFrames[STOP]           = 29;
+  BreathFrames[LAY_STOP]       = 24;
+  BreathFrames[SCRAPE]         = 15;
+  BreathFrames[FIGHT_FORWARD]  = 14;
+  BreathFrames[FIGHT_BACKWARD] = 14;
+  BreathFrames[FIGHT_SIDE]     = 10;
+  BreathFrames[DIE_PRI]        = 27;
+  BreathFrames[DIE_SEC]        = 24;
+  BreathFrames[DIE_OUT]        = 13;
+}
+
+Antlers {
+
+  //range of the final score will generate an animal value to AI
+  MinFinalScoreToAnimalValue[EASY]   = 65;
+  MaxFinalScoreToAnimalValue[EASY]   = 150;
+  MinFinalScoreToAnimalValue[NORMAL] = 60;
+  MaxFinalScoreToAnimalValue[NORMAL] = 175;
+  MinFinalScoreToAnimalValue[EXPERT] = 60;
+  MaxFinalScoreToAnimalValue[EXPERT] = 180;
+
+  //RECORDS
+
+  //minimum points for world record typical
+  MinimumTWorldRecord[EASY]    = 180;
+  MinimumTWorldRecord[NORMAL]  = 180;
+  MinimumTWorldRecord[EXPERT]  = 180;
+
+  //minimum points for world record non-typical
+  MinimumNTWorldRecord[EASY]   = 170;
+  MinimumNTWorldRecord[NORMAL] = 170;
+  MinimumNTWorldRecord[EXPERT] = 170;
+
+  //minimum points for record book for typical
+  MinimumTRecordBook[EASY]    = 160;
+  MinimumTRecordBook[NORMAL]  = 160;
+  MinimumTRecordBook[EXPERT]  = 160;
+
+  //minimum points for record book for non-typical
+  MinimumNTRecordBook[EASY]   = 145;
+  MinimumNTRecordBook[NORMAL] = 145;
+  MinimumNTRecordBook[EXPERT] = 145;
+
+  //SCALE
+  
+  //main beam scale
+  MainBeamScale[EASY]   = -35%, -5%;
+  MainBeamScale[NORMAL] = -35%, 7%;
+  MainBeamScale[EXPERT] = -35%, 17%;
+
+  //tines scale
+  TinesScale[EASY]   = -10%, 5%;
+  TinesScale[NORMAL] = -10%, 9%;
+  TinesScale[EXPERT] = -10%, 10%;
+
+  //others scale
+  OthersScale[EASY]   = -5%, 5%;
+  OthersScale[NORMAL] = -5%, 5%;
+  OthersScale[EXPERT] = -5%, 5%;
+
+  //rotation per axis
+  PerAxisScale[EASY]   = -10%, 10%;
+  PerAxisScale[NORMAL] = -10%, 10%;
+  PerAxisScale[EXPERT] = -10%, 10%;
+
+  //ROTATION (in degrees)
+  MaxRotation[EASY]   = 10;
+  MaxRotation[NORMAL] = 10;
+  MaxRotation[EXPERT] = 10;
+
+  //PHASE 1A:
+  
+  //create spike?
+  Spike[EASY]   = 25%;
+  Spike[NORMAL] = 15%;
+  Spike[EXPERT] = 10%;
+
+  //PHASE 1B:
+
+  //create both main beam? (if not, will create only left or right (50% for each)
+  MainBoth[EASY]   = 98%;
+  MainBoth[NORMAL] = 98%;
+  MainBoth[EXPERT] = 98%;
+  
+  //differences between left/right beams (if has both)
+  MainBeamVarScale[EASY]   = 10%;
+  MainBeamVarScale[NORMAL] = 10%;
+  MainBeamVarScale[EXPERT] = 10%;
+
+  //differences between left/right beams (if has both) (in degrees)
+  MainBeamVarRot[EASY]   = 3;
+  MainBeamVarRot[NORMAL] = 3;
+  MainBeamVarRot[EXPERT] = 3;
+
+  //PHASE 2:
+  
+  //create first point (if not both nor neither, will create only one side (50% for left or right)
+  CreatePointBoth[1][EASY]      = 70%;
+  CreatePointBoth[1][NORMAL]    = 80%;
+  CreatePointBoth[1][EXPERT]    = 90%;
+  CreatePointNeither[1][EASY]   = 28%;
+  CreatePointNeither[1][NORMAL] = 18%;
+  CreatePointNeither[1][EXPERT] = 5%;
+
+  //create second point (if not both nor neither, will create only one side (50% for left or right)
+  CreatePointBoth[2][EASY]      = 100%;
+  CreatePointBoth[2][NORMAL]    = 100%;
+  CreatePointBoth[2][EXPERT]    = 100%;
+  CreatePointNeither[2][EASY]   = 0%;
+  CreatePointNeither[2][NORMAL] = 0%;
+  CreatePointNeither[2][EXPERT] = 0%;
+
+  //create third point (if not both nor neither, will create only one side (50% for left or right)
+  CreatePointBoth[3][EASY]      = 80%;
+  CreatePointBoth[3][NORMAL]    = 90%;
+  CreatePointBoth[3][EXPERT]    = 95%;
+  CreatePointNeither[3][EASY]   = 19%;
+  CreatePointNeither[3][NORMAL] = 9%;
+  CreatePointNeither[3][EXPERT] = 2%;
+
+  //create fourth point (if not both nor neither, will create only one side (50% for left or right)
+  CreatePointBoth[4][EASY]      = 80%;
+  CreatePointBoth[4][NORMAL]    = 90%;
+  CreatePointBoth[4][EXPERT]    = 95%;
+  CreatePointNeither[4][EASY]   = 19%;
+  CreatePointNeither[4][NORMAL] = 9%;
+  CreatePointNeither[4][EXPERT] = 2%;
+
+//Mule deer should not have a G5
+  //create fifth point (if not both nor neither, will create only one side (50% for left or right)
+  CreatePointBoth[5][EASY]      = 0%;
+  CreatePointBoth[5][NORMAL]    = 0%;
+  CreatePointBoth[5][EXPERT]    = 0%;
+  CreatePointNeither[5][EASY]   = 100%;
+  CreatePointNeither[5][NORMAL] = 100%;
+  CreatePointNeither[5][EXPERT] = 100%;
+
+  //PHASE 3:
+
+  //create abnormals
+  AbnormalBoth[EASY]      = 2%;
+  AbnormalBoth[NORMAL]    = 2%;
+  AbnormalBoth[EXPERT]    = 2%;
+  AbnormalNeither[EASY]   = 97%;
+  AbnormalNeither[NORMAL] = 97%;
+  AbnormalNeither[EXPERT] = 97%;
+
+  //PHASE 4:
+  
+  //create E points from tines
+  EPointsBoth[EASY]      = 3%;
+  EPointsBoth[NORMAL]    = 3%;
+  EPointsBoth[EXPERT]    = 3%;
+  EPointsNeither[EASY]   = 93%;
+  EPointsNeither[NORMAL] = 93%;
+  EPointsNeither[EXPERT] = 93%;
+  
+  //PHASE 5:
+
+  //high/low nub chance
+  HighNubChance[EASY]   = 10%;
+  HighNubChance[NORMAL] = 10%;
+  HighNubChance[EXPERT] = 10%;
+  
+  //if hign nub chance
+  HighPerNubChance[EASY]   = 50%;
+  HighPerNubChance[NORMAL] = 50%;
+  HighPerNubChance[EXPERT] = 50%;
+
+  //if low nub chance
+  LowPerNubChance[EASY]   = 0.5%;
+  LowPerNubChance[NORMAL] = 0.5%;
+  LowPerNubChance[EXPERT] = 0.5%;
+}
+
+Fight {
+
+  //fight sounds
+  Sounds = Data\Animals\Deer\Common\Sounds\Antlers\Antler1.wav,
+           Data\Animals\Deer\Common\Sounds\Antlers\Antler2.wav,
+           Data\Animals\Deer\Common\Sounds\Antlers\Antler3.wav,
+           Data\Animals\Deer\Common\Sounds\Antlers\Antler4.wav,
+           Data\Animals\Deer\Common\Sounds\Antlers\Antler5.wav;
+}
+
+//********************************** STICKERS MALE *********************************
+Sticker {
+
+  HelperLeft   = @stickers_head01;
+  HelperRight  = @stickers_head;
+  CreateChance = 0.5;
+  MinRadius    = 1;
+  MaxRadius    = 1;
+  MinOpacity   = 0.5;
+  MaxOpacity   = 1;
+  Maps         = Data\Animals\Deer\Common\Stickers\Sticker_head_01.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_head_02.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_head_03.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_head_04.tex = 25%;
+		 
+}
+
+Sticker {
+
+  HelperLeft   = @stickers_neck_03;
+  HelperRight  = @stickers_neck_01;
+  CreateChance = 0.7;
+  MinRadius    = 0.8;
+  MaxRadius    = 1;
+  MinOpacity   = 0.5;
+  MaxOpacity   = 1;
+  Maps         = Data\Animals\Deer\Common\Stickers\Sticker_neck_01.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_neck_02.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_neck_03.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_neck_04.tex = 25%;
+}
+
+Sticker {
+
+  HelperLeft   = @stickers_neck_04;
+  HelperRight  = @stickers_neck_02;
+  CreateChance = 0.8;
+  MinRadius    = 1.0;
+  MaxRadius    = 1.5;
+  MinOpacity   = 0.5;
+  MaxOpacity   = 1;
+  Maps         = Data\Animals\Deer\Common\Stickers\Sticker_neck_05.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_neck_06.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_neck_07.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_neck_08.tex = 25%;
+}
+
+Sticker {
+
+  HelperLeft   = @stickers_torax_07;
+  HelperRight  = @stickers_torax_01;
+  CreateChance = 0.7;
+  MinRadius    = 1;
+  MaxRadius    = 1.5;
+  MinOpacity   = 0.5;
+  MaxOpacity   = 1;
+  Maps         = Data\Animals\Deer\Common\Stickers\Sticker_torax_01.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_02.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_03.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_04.tex = 25%;
+}
+
+Sticker {
+
+  HelperLeft   = @stickers_torax_09;
+  HelperRight  = @stickers_torax_03;
+  CreateChance = 0.7;
+  MinRadius    = 1;
+  MaxRadius    = 1.2;
+  MinOpacity   = 0.5;
+  MaxOpacity   = 1;
+  Maps         = Data\Animals\Deer\Common\Stickers\Sticker_torax_05.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_06.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_07.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_08.tex = 25%;
+}
+
+Sticker {
+
+  HelperLeft   = @stickers_torax_10;
+  HelperRight  = @stickers_torax_04;
+  CreateChance = 0.85;
+  MinRadius    = 1;
+  MaxRadius    = 1.2;
+  MinOpacity   = 0.5;
+  MaxOpacity   = 1;
+  Maps         = Data\Animals\Deer\Common\Stickers\Sticker_torax_09.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_10.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_11.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_12.tex = 25%;
+}
+
+Sticker {
+
+  HelperLeft   = @stickers_torax_11;
+  HelperRight  = @stickers_torax_05;
+  CreateChance = 0.65;
+  MinRadius    = 1;
+  MaxRadius    = 1.2;
+  MinOpacity   = 0.5;
+  MaxOpacity   = 1;
+  Maps         = Data\Animals\Deer\Common\Stickers\Sticker_torax_13.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_14.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_15.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_16.tex = 25%;
+}
+
+Sticker {
+
+  HelperLeft   = @stickers_torax_12;
+  HelperRight  = @stickers_torax_06;
+  CreateChance = 0.8;
+  MinRadius    = 1;
+  MaxRadius    = 1.2;
+  MinOpacity   = 0.5;
+  MaxOpacity   = 1;
+  Maps         = Data\Animals\Deer\Common\Stickers\Sticker_torax_17.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_18.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_19.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_20.tex = 25%;
+}
+
+Sticker {
+
+  HelperRight  = @stickers_torax_06;
+  CreateChance = 0.0001; //1 each 10000 deers
+  MinRadius    = 0.7;
+  MaxRadius    = 0.7;
+  MinOpacity   = 0.5;
+  MaxOpacity   = 0.8;
+  Maps         = Data\Animals\Deer\Common\Stickers\Sticker_egg1.tex = 100%;
+}
+
+Sticker {
+
+  HelperLeft  = @stickers_torax_12;
+  CreateChance = 0.0001; //1 each 10000 deers
+  MinRadius    = 0.7;
+  MaxRadius    = 0.7;
+  MinOpacity   = 0.5;
+  MaxOpacity   = 0.8;
+  Maps         = Data\Animals\Deer\Common\Stickers\Sticker_egg1.tex = 100%;
+}
+
+//********************************** STICKERS FEMALE *********************************
+
+Sticker {
+
+  HelperLeft   = @stickers_neck_04_F;
+  HelperRight  = @stickers_neck_02_F;
+  CreateChance = 0.8;
+  MinRadius    = 0.7;
+  MaxRadius    = 1;
+  MinOpacity   = 0.5;
+  MaxOpacity   = 1;
+  Maps         = Data\Animals\Deer\Common\Stickers\Sticker_neck_05.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_neck_06.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_neck_07.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_neck_08.tex = 25%;
+}
+
+Sticker {
+
+  HelperLeft   = @stickers_torax_07_F;
+  HelperRight  = @stickers_torax_01_F;
+  CreateChance = 0.7;
+  MinRadius    = 0.8;
+  MaxRadius    = 1;
+  MinOpacity   = 0.5;
+  MaxOpacity   = 1;
+  Maps         = Data\Animals\Deer\Common\Stickers\Sticker_torax_01.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_02.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_03.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_04.tex = 25%;
+}
+
+Sticker {
+
+  HelperLeft   = @stickers_torax_09_F_F;
+  HelperRight  = @stickers_torax_03_F_F;
+  CreateChance = 0.7;
+  MinRadius    = 0.8;
+  MaxRadius    = 1;
+  MinOpacity   = 0.5;
+  MaxOpacity   = 1;
+  Maps         = Data\Animals\Deer\Common\Stickers\Sticker_torax_05.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_06.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_07.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_08.tex = 25%;
+}
+
+Sticker {
+
+  HelperLeft   = @stickers_torax_10_F;
+  HelperRight  = @stickers_torax_04_F;
+  CreateChance = 0.85;
+  MinRadius    = 0.8;
+  MaxRadius    = 1;
+  MinOpacity   = 0.5;
+  MaxOpacity   = 1;
+  Maps         = Data\Animals\Deer\Common\Stickers\Sticker_torax_09.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_10.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_11.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_12.tex = 25%;
+}
+
+Sticker {
+
+  HelperLeft   = @stickers_torax_11_F;
+  HelperRight  = @stickers_torax_05_F;
+  CreateChance = 0.65;
+  MinRadius    = 0.8;
+  MaxRadius    = 1;
+  MinOpacity   = 0.5;
+  MaxOpacity   = 1;
+  Maps         = Data\Animals\Deer\Common\Stickers\Sticker_torax_13.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_14.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_15.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_16.tex = 25%;
+}
+
+Sticker {
+
+  HelperLeft   = @stickers_torax_12_F;
+  HelperRight  = @stickers_torax_06_F;
+  CreateChance = 0.8;
+  MinRadius    = 0.8;
+  MaxRadius    = 1;
+  MinOpacity   = 0.5;
+  MaxOpacity   = 1;
+  Maps         = Data\Animals\Deer\Common\Stickers\Sticker_torax_17.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_18.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_19.tex = 25%,
+		 Data\Animals\Deer\Common\Stickers\Sticker_torax_20.tex = 25%;
+}
+
+Sticker {
+
+  HelperRight  = @stickers_torax_06_F;
+  CreateChance = 0.0001; //1 each 10000 deers
+  MinRadius    = 0.6;
+  MaxRadius    = 0.6;
+  MinOpacity   = 0.5;
+  MaxOpacity   = 0.8;
+  Maps         = Data\Animals\Deer\Common\Stickers\Sticker_egg1.tex = 100%;
+}
+
+Sticker {
+
+  HelperLeft  = @stickers_torax_11_F;
+  CreateChance = 0.0001; //1 each 10000 deers
+  MinRadius    = 0.6;
+  MaxRadius    = 0.6;
+  MinOpacity   = 0.5;
+  MaxOpacity   = 0.8;
+  Maps         = Data\Animals\Deer\Common\Stickers\Sticker_egg1.tex = 100%;
+}
+
+BonesStretch {
+
+  Chance = 99.99%;
+
+  //head/neck
+  MacroVariation    = -0.03, 0.04;
+  MicroVariation    = -0.03, 0.04;
+  BoneWeigth[head]  = 0.8, 0.8, 0.8;
+  BoneWeigth[neck1] = 1.5, 1.5, 1.5;
+  BoneWeigth[neck2] = 1.5, 1.5, 1.5;
+  BoneWeigth[neck3] = 1, 1, 1;
+
+  //ears
+  MacroVariation    = -0.05, 0;
+  MicroVariation    = 0, 0;
+  BoneWeigth[R Ear] = 2, 2, 2;
+  BoneWeigth[L Ear] = 2, 2, 2;
+
+  //spine
+  MacroVariation     = -0.02, 0.05;
+  MicroVariation     = -0.003, 0.003;
+  BoneWeigth[Spine]  = 1, 1, 0;
+  BoneWeigth[Spine1] = 1, 1, 0;
+  BoneWeigth[Spine2] = 2, 2, 0;
+  BoneWeigth[Spine3] = 2, 2, 0;
+  BoneWeigth[Spine4] = 2, 2, 0;
+  BoneWeigth[Spine5] = 2, 2, 0;
+  BoneWeigth[Spine6] = 1, 1, 0;
+
+  //tail
+  MacroVariation    = -0.03, 0.03;
+  MicroVariation    = -0.003, 0.003;
+  BoneWeigth[Tail1] = 2, 2, 3;
+  BoneWeigth[Tail2] = 2, 2, 3;
+  BoneWeigth[Tail3] = 2, 2, 3;
+
+  //legs  
+  MacroVariation          = -0.02, 0.08;
+  MicroVariation          = 0, 0;
+  BoneWeigth[RR Thigh]    = 1, 0, 0.5;
+  BoneWeigth[LR Thigh]    = 1, 0, 0.5;
+  BoneWeigth[RF Thigh]    = 1, 0, 1;
+  BoneWeigth[LF Thigh]    = 1, 0, 1;
+  BoneWeigth[RR Calf]     = 1, 0, 0.5;
+  BoneWeigth[LR Calf]     = 1, 0, 0.5;
+  BoneWeigth[RF Calf]     = 1, 0, 1;
+  BoneWeigth[LF Calf]     = 1, 0, 1;
+  BoneWeigth[RR End]      = 1, 0, 1;
+  BoneWeigth[LR End]      = 1, 0, 1;
+  BoneWeigth[RR Foot]     = 1, 0, 1;
+  BoneWeigth[LR Foot]     = 1, 0, 1;
+  BoneWeigth[RF Foot]     = 1, 0, 1;
+  BoneWeigth[LF Foot]     = 1, 0, 1;
+  BoneWeigth[RR Toe]      = 1, 0, 1;
+  BoneWeigth[LR Toe]      = 1, 0, 1;
+  BoneWeigth[RF Toe]      = 1, 0, 1;
+  BoneWeigth[LF Toe]      = 1, 0, 1;
+  BoneWeigth[RF Leg End]  = 1, 0, 1;
+  BoneWeigth[LF Leg End]  = 1, 0, 1;
+  BoneWeigth[RF Clavicle] = 1, 0, 1;
+  BoneWeigth[LF Clavicle] = 1, 0, 1;
+}
+
+//easter egg, fat deer (currently not used)
+BonesStretch {
+
+  Chance = 0.01%;
+
+  //spine
+  MacroVariation     = 0.05, 0.05;
+  MicroVariation     = 0, 0;
+  BoneWeigth[Spine1] = 5, 5, 0;
+  BoneWeigth[Spine2] = 7, 7, 0;
+  BoneWeigth[Spine3] = 10, 10, 0;
+  BoneWeigth[Spine4] = 7, 7, 0;
+  BoneWeigth[Spine5] = 5, 5, 0;
+}

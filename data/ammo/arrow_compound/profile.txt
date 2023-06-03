@@ -1,0 +1,80 @@
+//==============================================================================================================
+// Compound Bow Default arrow
+//==============================================================================================================
+
+//general item variables
+General {
+
+  Name     = Arrow_Compound;
+  Type     = Ammo;
+  Useable  = FALSE;
+
+  Model  = Data\Ammo\Common\Models\Arrow.j3d;
+  Model2 = Data\Ammo\Common\Models\FlyingArrow.j3d;
+
+  Preloads = Data\Ammo\Common\Models\Arrow.j3d,
+             Data\Ammo\Common\Models\FlyingArrow.j3d;
+
+  Icons = Data\Ammo\Common\Icons\Arrow.tex;
+
+  InterfaceScale = 0.9;
+
+  //shake strengh
+  ShakeStrength = 24;
+
+  //arrow vars
+  MaxVelocity = 47;   //km/h
+  Friction    = 0.1;
+}
+
+//ammo variables
+Ammo {
+
+  //aim bow up (in meters / angles)
+  AimUp[10] = -0.9;
+  AimUp[20] = -1.0;
+  AimUp[30] = -1.5;
+  AimUp[40] = -2.2;
+  AimUp[50] = -3.2;
+  AimUp[60] = -4.6;
+  AimUp[70] = -6.0;
+  AimUp[80] = -8.0;
+
+  //min/max calibration values accepted by this weapon item (in dcms)
+  MinCalibration = 100;
+  MaxCalibration = 800;
+
+  //default calibration for this weapon (in dcms)
+  DefaultCalibration = 400;
+
+  WeaponCompatibility = CompoundBow|psef7gx;
+
+  ShotsPerFire = 1;
+  SpreadAngle  = 0.03;
+
+  NoiseFXMinTime  = 0.5;
+  NoiseFXMaxTime  = 0.75;
+  NoiseFXStrength = 0.1;
+
+  //hit marks (radius in cm)
+  HitMarkRadius[Animal] = 10;
+  HitMarks[Animal] = Data\CommonFX\BulletMarks\Blood\HurtArrow.tex, Data\Ammo\Common\Models\FlyingArrow.j3d;
+  HitMarkRadius[Target] = 10;
+  HitMarks[Target] = Data\CommonFX\BulletMarks\Paper\Arrow.tex;
+
+  //energy of the shot in the form: [<distance(yards)>] = <energy>
+  AmmoEnergy[0]  = 2350;
+  AmmoEnergy[20] = 2325;
+  AmmoEnergy[30] = 2200;
+  AmmoEnergy[40] = 2175;
+  AmmoEnergy[50] = 2150;
+  AmmoEnergy[60] = 1850;
+  AmmoEnergy[70] = 1450;
+  AmmoEnergy[80] = 950;
+  AmmoEnergy[90] = 350;
+
+  //penetration of ammunition shot in the form: [<distance(meters)>] = <depth(cm)>
+  AmmoPenetration[0]  = 50;
+  AmmoPenetration[46] = 20;
+  AmmoPenetration[90] = 5;
+}

@@ -1,0 +1,353 @@
+//weapons
+
+[DBShotgun_name]  Double Barreled Shotgun
+[DBShotgun_desc]  Good for blowing up annoying programmers
+
+[PumpRifle_name]  Pump Rifle
+[PumpRifle_desc]  Pump Rifle
+
+[LeverRifle_name] Lever Rifle
+[LeverRifle_desc] Lever Rifle
+
+[BoltRifle_name]  Bolt Rifle
+[BoltRifle_desc]  Bolt Rifle
+
+[SingleShotRifle_name]  Single Shot Rifle
+[SingleShotRifle_desc]  Single Shot Rifle
+
+[PumpShotgun_name]  Pump Shotgun
+[PumpShotgun_desc]  Pump Shotgun
+
+[Muzzleloader_name]  Muzzleloader
+[Muzzleloader_desc]  Boom!
+
+[357Magnum_name]  Magnum Revolver
+[357Magnum_desc]  Magnum Revolver description
+
+[CompoundBow_name]  Compound Bow
+[CompoundBow_desc]  Compound Bow description
+
+[psef7gx_name]  PSE X-Force 7 GX
+[psef7gx_desc]  PSE X-Force 7 GX Compound Bow
+
+[SingleShotPistol_name]  Single Shot Pistol
+[SingleShotPistol_desc]  Say hello to my little friend
+
+[Longbow_name] Longbow
+[Longbow_desc] It's made of wood
+
+[RecurveBow_name] Recurve Bow
+[RecurveBow_desc] Recurve Bow description
+
+[Crossbow_name] Crossbow
+[Crossbow_desc] Crossbow description
+
+[Autoloader_name] Autoloader Rifle
+[Autoloader_desc] Autoloader Rifle description
+
+[DBShotgun_name] Double-Barreled Shotgun
+[DBShotgun_desc] Double-Barreled Shotgun description
+
+[PumpRifle_name] Pump Rifle
+[PumpRifle_desc] Pump Rifle description
+
+//ammunition
+
+[.207_name] .207
+[.207_desc] .207 ammo 
+
+[.223_name] .223
+[.223_desc] .223 ammo 
+
+[rm223r1_name] .223 Rem
+[rm223r1_desc] .223 Rem 69 grain 
+
+[.375_name] .375 H&H Magnum 270 Grain
+[.375_desc] .375 H&H Magnum 270 Grain 
+
+[pr375um3_name] .375 Rem Ultra Mag
+[pr375um3_desc] .375 Rem Ultra Mag 300 grain 
+
+[rs416ra_name] .416 Rem Mag
+[rs416ra_desc] .416 Rem Mag 400 grain 
+
+[.45-70_name] .45-70 Government
+[.45-70_desc] .45-70 Government 
+
+[.223_name] .223 (5.6x45mm)
+[.223_desc] .223 (5.6x45mm)
+
+[pra2250rb_name] .22-250 Rem
+[pra2250rb_desc] .22-250 Rem 50 grain 
+
+[.243_name] .243 100 Grain
+[.243_desc] .243 100 Grain 
+
+[prc2506ra_name] .25-06 Remington
+[prc2506ra_desc] .25-06 Remington 115 grain 
+
+[.257_name] .257 Roberts
+[.257_desc] .257 Roberts 
+
+[r250sv_name] 250 Savage
+[r250sv_desc] 250 Savage 100 grain 
+
+[pra260ra_name] .260 Remington
+[pra260ra_desc] .260 Remington 120 grain 
+
+[r264w2_name] .264 Win Mag
+[r264w2_desc] .264 Win Mag 140 grain
+
+[r6mm4_name] 6mm Remington
+[r6mm4_desc] 6mm Remington 100 grain 
+
+[6.5x55_name] 6.5x55mm Swedish
+[6.5x55_desc] 6.5x55mm Swedish 
+
+[r65mm2_name] 6.5mm Rem Mag
+[r65mm2_desc] 6.5mm Rem Mag 120 grain 
+
+[r68r1_name] 6.8mm Rem SPC
+[r68r1_desc] 6.8mm Rem SPC 115 grain 
+
+[.264_name] .264 Magnum
+[.264_desc] .264 Magnum 
+
+[.270_name] .270 Winchester
+[.270_desc] .270 Winchester 
+
+[pra270wa_name] .270 Win Rem
+[pra270wa_desc] .270 Win Rem 130 grain 
+
+[pra270wsmb_name] .270 WSM
+[pra270wsmb_desc] .270 WSM 150 grain 
+
+[pra280ra_name] .280 Rem
+[pra280ra_desc] .280 Rem 140 grain 
+
+[7mm_name] 7mm Magnum
+[7mm_desc] 7mm Magnum 
+
+[prsc7um1_name] 7mm Rem Ultra Mag
+[prsc7um1_desc] 7mm Rem Ultra Mag 150 grain 
+
+[r7mstw1_name] 7mm STW
+[r7mstw1_desc] 7mm STW 140 grain 
+
+[pra7m08rb_name] 7mm-08 Rem
+[pra7m08rb_desc] 7mm-08 Rem 140 grain 
+
+[r7msr1_name] 7mm Mauser (7x52)
+[r7msr1_desc] 7mm Mauser (7x52) 140 grain 
+
+[r762391_name] 7.62x39mm
+[r762391_desc] 7.62x39mm 125 grain 
+
+[r7x642_name] 7x64 Brenneke
+[r7x642_desc] 7x64 Brenneke 175 grain 
+
+[rs8mmra_name] 8mm Remington Mag
+[rs8mmra_desc] 8mm Remington Mag 200 grain 
+
+[r93x621_name] 9.3x62mm
+[r93x621_desc] 9.3x62mm 286 grain 
+
+[.30-30_name] .30-30 Winchester
+[.30-30_desc] .30-30 Winchester 
+
+[.30-06_name] .30-06 Springfield
+[.30-06_desc] .30-06 Springfield
+
+[prsc3006b_name] .30-06 Springf. Rem
+[prsc3006b_desc] .30-06 Springfield 180 grain 
+
+[.300_name] .300 Winchester Magnum
+[.300_desc] .300 Winchester Magnum 
+
+[rm300w7_name] .300 Win. Mag. Rem
+[rm300w7_desc] .300 Win. Mag. Rem 190 grain 
+
+[pra300wsmb_name] .300 WSM
+[pra300wsmb_desc] .300 WSM 180 grain 
+
+[pr300um3_name] .300 Rem Ultra Mag
+[pr300um3_desc] .300 Rem Ultra Mag 180 grain 
+
+[r300wb1_name] .300 Wby. Mag
+[r300wb1_desc] .300 Wby. Mag 180 grain 
+
+[.308_name] .308 Winchester 165 Grain
+[.308_desc] .308 Winchester 165 Grain 
+
+[prc338wa_name] .338 Win Mag
+[prc338wa_desc] .338 Win Mag 225 grain 
+
+[pr338um2_name] .338 Rem Ultra Mag
+[pr338um2_desc] .338 Rem Ultra Mag 250 grain 
+
+[r350m1_name] .350 Rem Mag
+[r350m1_desc] .350 Rem Mag 200 grain 
+
+[slugs_name] Sabot Slug Load
+[slugs_desc] Sabot Slug Load 
+
+[slugr_name] Rifled Slug Load
+[slugr_desc] Rifled Slug Load 
+
+[shell000_name] 000 Buckshot Load
+[shell000_desc] 000 Buckshot Load  
+
+[shell0_name] 0 Buckshot Load 
+[shell0_desc] 0 Buckshot Load 
+
+[shell4_name] no. 4 Buckshot Load
+[shell4_desc] no. 4 Buckshot Load 
+
+[ball_.45_name] .45 Round Ball
+[ball_.45_desc] .45 Round Ball 
+
+[ball_.50_name] .50 Round Ball
+[ball_.50_desc] .50 Round Ball 
+
+[maxiball_.54_name] .54 Maxi-Ball
+[maxiball_.54_desc] .54 Maxi-Ball 
+
+[.357_name] .357 Magnum
+[.357_desc] .357 Magnum 
+
+[r40sw1_name] .40 S&W
+[r40sw1_desc] .40 S&W 155 grain
+
+[colt45_name] Colt .45
+[colt45_desc] Colt .45 
+
+[41mag_name] .41 Rem. Magnum
+[41mag_desc] .41 Rem. Magnum 
+
+[44mag_name] .44 Rem. Magnum
+[44mag_desc] .44 Rem. Magnum 
+
+[32SW_name] .32 Smith & Wesson 
+[32SW_desc] .32 Smith & Wesson  
+
+[38SW_name] .38 Smith & Wesson 
+[38SW_desc] .38 Smith & Wesson  
+
+[gs9mmd_name] 9mm Lugger 
+[gs9mmd_desc] 9mm Lugger 124 grain 
+
+[Arrow_name] Arrow
+[Arrow_desc] Arrow 
+
+[Arrow_Compound_name] Arrow
+[Arrow_Compound_desc] Arrow 
+
+[easton390_name]  Easton 390 Arrow
+[easton390_desc]  Easton A/C/C Pro 390 Arrow
+
+[Arrow_Long_name] Arrow
+[Arrow_Long_desc] Arrow 
+
+[Arrow_Recurve_name] Arrow
+[Arrow_Recurve_desc] Arrow 
+
+[CrossbowArrow_name] Arrow
+[CrossbowArrow_desc] Arrow 
+
+//items
+
+[no_scope_name] No scope
+[no_scope_desc] No Scope description
+
+[Rifle_Scope_4_12_name] 4x12 rifle scope
+[Rifle_Scope_4_12_desc] 4x12 rifle scope description
+
+[Zeiss_Victory_Scope_6_24_name] Zeiss Victory 6-24x rifle scope
+[Zeiss_Victory_Scope_6_24_desc] Zeiss Victory FL Diavari 6-24x56 Rifle Scope
+
+[Zeiss_Victory_Scope_8_40_name] Zeiss Victory v2 8-40x rifle scope
+[Zeiss_Victory_Scope_8_40_desc] Zeiss Victory FL Diavari v2 8-40x56 Rifle Scope
+
+[Rifle_Scope_3_9_name] 3x9 rifle scope
+[Rifle_Scope_3_9_desc] 3x9 rifle scope description
+
+[ThermalScope_name] Thermal Scope
+[ThermalScope_desc] Thermal Scope description.
+
+[Treestand_name] Rock-a-Bye-Baby 7K Tree Stand
+[Treestand_desc] The ultimate in relaxation during the hunt, the Rock-a-Bye 7K has a built-in foot massager. But watch out because carrying it around can slow you down.
+
+[Tripod_name] The High-Up Hider 2005 Tripod
+[Tripod_desc] The 2005 version of the high-up hider has a swivel chair for 360 degree view. But it will slow you down while you're carrying it.
+
+[Blind_name] Livin In The Ritz 2005 Model
+[Blind_desc] Return of the Ritz. The finest transportable blind in the industry.
+
+[BlindScout_name] Scouting blind model
+[BlindScout_desc] Blinds are best set up before the season begins, and are a useful way of providing some cover in any location.
+
+[TreestandScout_name] Scouting Tree Stand
+[TreestandScout_desc] A tree stand put up before the hunting season starts is highly effective at hiding a hunter.
+
+[DeerFeeder_name] Scouting Deer Feeder
+[DeerFeeder_desc] Deer feeders bring in hungry bucks.  Most effective post-rut.
+
+[MockScrape_name] Mock Scrape
+[MockScrape_desc] This mock scrape will fool rutting bucks into thinking that their territory has been invaded.
+
+[Spotting_Scope_20_60_name] 20-60x Spotting Scope
+[Spotting_Scope_20_60_desc] Range-finding spotting scope for long range targeting.
+
+[Binoculars_10_25_name] 10-25x Binoculars
+[Binoculars_10_25_desc] Your basic field binoculars.
+
+[ThermalGoggles_name] Thermal Goggles
+[ThermalGoggles_desc] These goggles provide a high-tech way to spot animals. Counts as an exotic item.
+
+[ATV_name] CL-350 ATV
+[ATV_desc] A powerful ATV that will get you where you want to go fast.
+
+[Mildred_name] Horse
+[Mildred_desc] A horse can get you through some difficult terrain, and doesn't make all the noise that the ATV does.
+
+[Map_name] Area Topo Map
+[Map_desc] A topographical map of your hunting area.
+
+[GPS_name] Western Larch GPS
+[GPS_desc] Pinpoint your position accurately and keep track of where you left vehicles and other items.
+
+[DeerFood_name] Deer Food
+[DeerFood_desc] Nothing like using food to attract when the deer aren't in rut. Especially strong post-rut, when food supplies are scarce.
+
+[Grunt_Call_name] Grunt Call
+[Grunt_Call_desc] Can stop a walking deer in its tracks, and possibly bring in curious does and bucks.
+
+[Doe_in_Heat_Call_name] Doe in Heat Call
+[Doe_in_Heat_Call_desc] Extremely effective on lone bucks during the rut.
+
+[ElectronicCall_name] Electronic Deer Call
+[ElectronicCall_desc] Not nearly as effective as a skilled hunter using a normal call, but also no chance of blowing the call for the less skilled callers.
+
+[Antler_Call_name] Antler Call
+[Antler_Call_desc] Rattling antlers bring in curious deer.
+
+[Scent_Stomper_name] Scent Stomper
+[Scent_Stomper_desc] A specially blended formula allows your smell to blend into the environment.
+
+[Doe_In_Estrus_Scent_name] Doe in estrus scent
+[Doe_In_Estrus_Scent_desc] Great for attracting bucks in the rut
+
+[Big_Buck_Scent_name] Big Buck Scent
+[Big_Buck_Scent_desc] Brings territorial bucks and amorous does running during the rut. Less effective but still useable in the pre-rut and post-rut.
+
+[Shotgun_Muzzleloader_Scope_name] 2x Scope
+[Shotgun_Muzzleloader_Scope_desc] Basic shotgun/muzzleloader scope.
+
+[Shotgun_Muzzleloader_Scope4x_name] 2-4x Scope
+[Shotgun_Muzzleloader_Scope4x_desc] Simple shotgun/muzzleloader scope with dual zoom.
+
+[Crossbow_Scope_4_name] 4x Scope
+[Crossbow_Scope_4_desc] Basic crossbow scope.
+
+[Camera_name] Motion-Sensing Video Camera
+[Camera_desc] Leave this camera in an area where you think there might be deer and wait for the signal. The hunter can watch the camera's live feed at any moment.

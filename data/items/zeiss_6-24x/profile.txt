@@ -1,0 +1,40 @@
+//==============================================================================================================
+// Zeiss Victory FL Diavari 6-24x56 Rifle Scope
+//==============================================================================================================
+
+//general item variables
+General {
+
+  Name     = Zeiss_Victory_Scope_6_24;
+  Type     = Scope;
+  Useable  = FALSE;
+
+  //multiplayer item category
+  MultiplayerCategory = Scopes;
+
+  Helper = @Scope;
+  Model  = Data\Items\Zeiss_6-24x\ThermalScope.j3d;
+
+  //scope class for compatible scopes/items
+  ScopeClass = RifleScope;
+
+  //Preloads = Data\Items\ThermalScope\Overlay.tex;
+  
+  //add the binoc reticle overlay
+  //Reticle = Data\Items\ThermalScope\Overlay.tex;
+
+  //add the item icons
+  //Icons = Data\Items\ThermalScope\Icon_glow.tex,
+  //        Data\Items\ThermalScope\Icon.tex;
+
+  //zoom values
+  Zoom = 6, 12, 18, 24;
+
+  //show range finding?
+  ShowRangeFinding = TRUE;
+
+  InterfaceScale = 1;
+
+  //use scope support flag
+  UseScopeSupport = TRUE;
+}

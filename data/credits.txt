@@ -1,0 +1,399 @@
+>>*Deer Hunter: The 2005 Season
+<<Game version: 1.2
+
+>>*HU Corner ModPack
+<<Mod version: 1.1
+<<by:
+>>ita
+
+>>*HU Corner
+http://hucorner.imbl.net
+
+
+
+
+
+
+>>*Deer Hunter: The 2005 Season
+<produced by:
+
+
+
+>> Atari
+
+<<Senior Producer
+*Constantine Hantzopoulos
+
+Brand Manager
+*Tara Greco
+
+Executive Producer
+*Hudson Piehl
+
+Director of Technology
+*Paul Hellier
+
+Director of Marketing
+*Tom Nichols
+
+Director of Creative Services
+*Steve Martin
+
+Director of Editorial & Documentation Services
+*Liz Mackney
+
+Art Director
+*Charles Rizzo	
+
+Graphic Designer
+*Roderick Tilley
+
+Documentation Specialist
+*Ross Edmond
+
+Copywriter
+*Paul Collin
+
+Director of Publishing Support
+*Michael Gilmartin
+
+Q.A. Manager
+*Bill Carroll
+
+I.T. Manager/Western Region
+*Ken Ford
+
+Manager of Technical Support
+*Michael Vetsch
+
+Q.A. Testing Supervisor
+*Chuck Nunez
+
+Lead Tester
+*Daniyel Garcia
+
+Assistant Lead Testers
+*Chris Morales
+*Henry Yei
+
+Testers 
+*Raquel Botti
+*Bryce Ericson
+*Aaron Ichiyasu
+*Chad Neel
+*Mark Nonato
+*Carl Vogel
+*Sean Winck
+
+Betatest Administrator
+*Ken Moodie
+
+Manager, Engineering Services and Compatibility Lab
+*Dave Strang
+
+Engineering Services Specialist
+*Ken Edwards
+
+Engineering Services Technicians
+*Dan Burkhead
+*Eugene Lai
+
+Senior Compatibility Analyst
+*Chris McQuinn
+
+Compatibility Test Lead
+*Scottie Kramer
+
+Compatibility Analysts
+*Randy Buchholz 
+*Patricia-Jean Cody
+*Mark Florentino
+*Scotte Kramer
+*Cuong Vu
+
+Director, Global Web Services
+*Jon Nelson
+
+Producer, Online
+*Scott Lynch
+
+Senior Programmer, Online
+*Gerald “Monkey” Burns
+
+Senior Web Designer, Online
+*Richard Leighton
+
+Online Marketing Manager
+*Sarah Horton
+
+Vice President, Operations
+*Todd Curtis
+
+Director of Manufacturing
+*Eddie Pritchard
+
+Lead Senior Buyer
+*Lisa Leon
+
+Buyer
+*Gardnor Wong
+
+Senior Buyer
+*Tara Moretti
+
+Materials Planner
+*Janet Sieler
+
+Process Planner
+*Nichole Mackey
+
+
+
+
+
+
+
+
+>*Deer Hunter: The 2005 Season
+<created by:
+
+
+
+>>Southlogic Studios
+
+
+<Modeling and Animation Team
+
+<Lead Artist
+*Ricardo Coimbra da Rocha
+
+3D Character and Item Modeling and Animation
+*Cláudio Marzo da Silva
+*Felipe Pulcinelli da Jornada
+*Henrique Schlatter Manfroi
+*Luiz Henrique Lopes Pellizzari
+*Ricardo Coimbra da Rocha
+
+Splash Screen
+*Felipe Pulcinelli da Jornada
+
+Weapon Customization Tutorial
+*Henrique Schlatter Manfroi
+
+
+>Design Team
+
+<Lead Architect
+*Adriano Ledur
+
+3D Organic and Mechanical Modeling and Level Layout
+*Fernando Peña D'Andrea
+*Nereu Bavaresco Felzke
+*Juliano Salazar Rocha
+*Adriano Ledur
+*Maurício Bammann Gehling
+
+Interface Design
+*Adriano Ledur
+
+
+>Application Programming Team
+
+<Lead Programmer
+*Rafael Horbach
+
+Application Programming
+*Rafael Horbach
+*Luiz Henrique Pereira da Silva Gama
+*Christian Lykawka
+
+
+>Engine and Tools Team
+
+<Lead Programmer
+*Gustavo Goedert
+
+Engine Programming
+*Gustavo Goedert
+*Rafael Piccin Torchelsen
+*Christian Lykawka
+
+Tools Programming
+*Paulo Zaffari
+*Gustavo Goedert
+*Christian Lykawka
+
+
+>Project Management
+
+<Lead Designer
+*Christopher Kastensmidt
+*Adriano Ledur
+
+Producer (Southlogic)
+*Christopher Kastensmidt
+
+
+>Corporate Management
+
+<Creative Director
+*Adriano Ledur
+
+Art Director
+*Ricardo Rocha
+
+President
+*Christian Lykawka
+
+Technical Director
+*Gustavo Goedert
+
+Commercial Director
+*Christopher Kastensmidt
+
+Administrative Assistant
+*Marília Mota
+
+Business Development
+*Dan Lee Rogers
+President, Biz-Dev. Inc
+
+
+
+
+
+
+
+
+>>Other Contributors
+
+
+<Ragdoll physics system
+
+<*Tokamak Game Physics SDK
+*www.tokamakphysics.com
+
+
+>Music
+
+<Main
+*Glauco Alves - solo guitar
+*Luciano Albo - rhythm guitar and bass
+*Alexandre "Papel" Loureiro - drums
+
+Trophy
+*Luis Henrique "Tchê" Gomes - solo guitar
+*Luciano Albo - rhythm guitars and bass
+*Alexandre "Papel" Loureiro - drums
+
+All music written and produced by
+*Luciano Albo
+2004
+
+
+>Sounds licensed from
+
+<*Jones Calls (www.jonescalls.com)
+*Sounddogs.com
+*Soundrangers.com
+*Shockwave-Sound.com
+
+
+>Other Technologies
+
+<zLib Compression Library
+*Mark Adler
+*Jean-loup Gailly
+
+Inno Setup & My Inno Setup Extensions
+*Jordan Russell
+*Martijn Laan
+
+Ogg Vorbis
+*(c) 2004, Xiph.Org Foundation
+
+
+>Technical Partners
+
+<NVidia
+*Matthias Wloka
+
+ATI
+*Agnes So
+
+Gamespy
+*Joost Schuur
+*Orlando Rojas
+*Tom Hitchcock
+*Bill Dewey
+
+
+>Miscellaneous
+
+<Top Beta Testers
+*Philip Brown
+*Ryan Freeman
+*Ricky Gartner
+*Chris Gill
+*Paul Graham
+*James Hallford
+*Deborah Hutton
+*Rob Krijns
+*David Lucas
+*Andy Martin
+*Trevor McCool
+*Rebecca Napolitano
+*Thomas Oldrey
+*Sean Sweeney
+*Adam Huber
+*Ken Hall
+
+
+>Special Thanks (Atari)
+<*Peter Eckert
+*Jennifer Baum
+*Stacy Hendrickson
+*Stacey Clement
+*Dan Deoreo
+*Bill Levay
+*Jim Boone
+*Bob Welch
+*James Daly
+*Jon Chmura
+*Henrik Strandberg
+*Alex Ahlund
+*Mark Flitman
+*Ken Allen
+*Chris Munson
+*Rocco Scandizzi
+*Mike Maynard
+*Katharine Daugherty
+*Big Game Lodge
+*All our friends and families
+
+
+>Special Thanks (Southlogic)
+<*Andrey Michel Lopes Aires
+*Fábio Fedrizzi Bernardon
+
+
+
+
+This product contains software technology licensed from 
+GameSpy Industries, Inc.  (c) 1999-2004 GameSpy Industries, Inc. 
+GameSpy and the "Powered by GameSpy" design are trademarks of 
+GameSpy Industries, Inc. All rights reserved.
+
+
+
+
+
+>In Memory of:
+<*Mila Fike
+A longtime friend of the Deer Hunter community
+
+
+
+
+
+

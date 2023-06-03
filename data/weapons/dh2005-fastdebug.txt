@@ -1,0 +1,15 @@
+BoltRifle
+LeverRifle
+SingleShotRifle
+PumpShotgun
+Muzzleloader
+357Magnum
+CompoundBow
+psef7gx
+Longbow
+RecurveBow
+Crossbow
+Autoloader
+PumpRifle
+DBShotgun
+SingleShotPistol

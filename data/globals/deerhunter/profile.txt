@@ -1,0 +1,417 @@
+//==============================================================================================================
+// Global Variables
+//==============================================================================================================
+
+//prey
+Prey {
+
+  BagLimitAntlered  = 4;
+  BagLimitAntleress = 2;
+
+  //maximum animals being spawned near hunter at a time
+  MaxSpawnAnimals     = 4;
+
+  //maximum animals of the same specie spawned near hunter at a time
+  MaxSpawnSameAnimals = 1;
+
+  //Prey["animal name or type"]["optional season"] = "gameplay"Groups:"number of groups";
+  Prey[Deer][Pre-Rut]     = EasyGroups:29, NormalGroups:25, ExpertGroups:20;
+  Prey[Deer][Rut]         = EasyGroups:33, NormalGroups:28, ExpertGroups:23;
+  Prey[Deer][Post-Rut]    = EasyGroups:20, NormalGroups:17, ExpertGroups:13;
+  Prey[Armadillo]         = Groups:12;
+  Prey[Badger]            = Groups:12;
+  Prey[Bass]              = Groups:10;
+  Prey[Brown Hare]        = Groups:12;
+  Prey[Canada Goose]      = Groups:2;
+  Prey[Jackrabbit]        = Groups:12;
+  Prey[Mallard Duck]      = Groups:2;
+  Prey[Osprey]            = Groups:2;
+  Prey[Platypus]          = Groups:3;
+  Prey[Racoon]            = Groups:12;
+  Prey[Red Tailed Hawk]   = Groups:2;
+  Prey[RiverOtter]        = Groups:3;
+  Prey[SandMonitor]       = Groups:12;
+  Prey[Squirrel]          = Groups:12;
+  Prey[TaxideaTaxus]      = Groups:12;
+  Prey[Trout]             = Groups:10;
+  Prey[Wallaroo]          = Groups:12;
+  Prey[WedgeTailedEagle]  = Groups:1;
+  Prey[White Squirrel]    = Groups:12;
+  Prey[WildTurkey]        = Groups:6;
+
+  MinAnimalMarksSkill =  20%;
+  MaxAnimalMarksSkill = 100%;
+}
+
+//general
+General {
+
+  //default FOV
+  DefaultCameraFOV = 60;
+
+  //preloads (general effects and other very global files)
+  Preloads = Data\CommonFX\Blood\BloodDrops.lay,
+             Data\CommonFX\Blood\BloodPudle.lay,
+             Data\CommonFX\Breath\Breath.par,
+             Data\CommonFX\BulletHit\HitBlood.par,
+             Data\CommonFX\BulletHit\HitDust.par,
+             Data\CommonFX\BulletMarks\Paper\Arrow.tex,
+             Data\CommonFX\BulletMarks\Paper\Bullet.tex,
+             Data\CommonFX\BulletMarks\Blood\HurtArrow.tex,
+             Data\CommonFX\BulletMarks\Blood\HurtBullet.tex,
+             Data\CommonFX\Snow\Snow.par,
+             Data\CommonFX\Rock\Rock.par,
+             Data\CommonFX\Smoke\Smoke.par,
+             Data\CommonFX\WaterSplash\Splash.j3d,
+             Data\CommonFX\WaterSplash\Splash.par,
+             Data\CommonFX\WaterSplash\splash_shoot.par,
+             Data\CommonFX\WaterSplash\splash_fast.par,
+             Data\CommonFX\WaterSplash\SplashStop.j3d,
+             Data\CommonFX\WaterSplash\SplashSlow.j3d,
+             Data\CommonFX\WaterSplash\SplashFast.j3d,
+             Data\CommonFX\WaterSplash\SplashShoot.j3d,
+             Data\CommonFX\Dust\HitGroundDust.par,
+             Data\Weapons\Common\Sounds\BulletCamLoop.wav,
+             Data\Weapons\Common\Sounds\BulletCamHitBody.wav,
+             Data\Weapons\Common\Sounds\BulletHit*.wav,
+             Data\Weapons\Common\Sounds\ArrowHit*.wav,
+             Data\Weapons\Common\Sounds\BulletFlyBy*.wav,
+             Data\Weapons\Common\Sounds\BreakingGlass.wav,
+             Data\Items\Common\Sounds\ZoomIn.wav,
+             Data\Items\Common\Sounds\ZoomOut.wav,
+             Data\CommonFX\DebugFX\Axis\Axis-size1.j3d,
+             Data\CommonFX\DebugFX\quad.j3d,
+             Data\World\Models\Rubs\*.j3d,
+             Data\World\Sounds\Cars\CarLoop.wav,
+             Data\World\sounds\Train\TrainHorn.wav,
+             Data\World\sounds\Train\TrainLoop.wav,
+             Data\Interface\Sounds\Screenshot.wav, //<-- @REVIEW@ interface sound here???
+             Data\Hunters\Common\Sounds\MountLoop*.wav,
+             Data\Animals\Common\Sounds\GroundHit*.wav,
+             Data\Weapons\Common\Sounds\ShellOnWood1.wav,
+             Data\Weapons\Common\Sounds\ShellOnWood2.wav,
+             Data\Weapons\Common\Sounds\ShellOnWood3.wav;
+}
+
+//game tweaks, just for testing
+Tweaks {
+
+  //reset this flag to disable all tweaks
+  UseTweaks = TRUE;
+
+  //use this flag to create at least one group of animals at the middle of the map
+  //MiddleMapAnimals = TRUE;
+
+  //use this flag to freeze the movements of all animals
+  //FrozenAnimals = TRUE;
+
+  //use this flag to make animals run in circles
+  AnimalsRunningInCircles = FALSE;
+
+  //use this flag to log all weapon shot and animal killing information
+  LogWeaponShotInfo = FALSE;
+
+  //use this flag to log animal senses
+  //LogAnimalSenses = TRUE;
+
+  //use this flag to disable animal vision
+  //DisableAnimalVision = TRUE;
+
+  //use this flag to disable animal hearing
+  //DisableAnimalHearing = TRUE;
+
+  //use this flag to disable animal smelling
+  //DisableAnimalSmelling = TRUE;
+
+  //use this flag to debug animal AI path building (tree evasion stuff)
+  TestAnimalPathBuilding = FALSE;
+
+  //use this flag to don't create animals (performance test)
+  DontCreateAnimals = FALSE;
+
+  //use this flag to don't create dynamic objects (performance test)
+  DontCreateDynamicObjects = FALSE;
+
+  //use this flag to let the spectator mode not collide with world (ghost mode)
+  SpectatorWithoutCollision = FALSE;
+
+  //use this flag to not create weather fx
+  DontCreateWeatherFX = FALSE;
+
+  //use this flag to not create weather fx
+  //ShowSuperGPS = TRUE;
+
+  //use this flag to not run the artificial intelligence code
+  //DontRunAI = TRUE;
+
+  //use this flag to test deer fighting (will avoid some tests to make it more frequent)
+  //TestDeerFight = TRUE;
+
+  //use this flag to test deer rubs (will avoid some tests to make it more frequent)
+  //TestDeerRubs = TRUE;
+
+  //use this flag to show on screen debug info
+  ShowDebugInfo = TRUE;
+  
+  //disable weapon shot spread
+  //DisableWeaponSpread = TRUE;
+
+  //testing feed on trees
+  //TestFeedOnTrees = TRUE;
+  
+  //testing path nodes
+  //TestPathNodes = TRUE;
+  
+  //testing ragdoll
+  //TestRagdoll = TRUE;
+}
+
+//levels section
+Levels {
+
+  //default frustum distance, in meters (each level will multiply this value by a factor)
+  FrustumDistance = 200;
+
+  //minimum size of a custom level, in km
+  MinCustomLevelSize = 2;
+
+  //min camera FOV to start disabling terrain LOD
+  UseNoLODMinCameraFOV = 40;
+
+  //percentage of the vegetation the minimal tree density setting will exclude from level
+  ExcludeOnMinTreeDensitySetting = 0.5;
+
+  //percentage the settings view frustum distance will actualy reduce
+  SettingsFrustumPercent = .4;
+
+  //min/max collision detection gap for world limit, in meters (which is defined per level)
+  MinWorldCollisionGap = 100;
+  MaxWorldCollisionGap = 500;
+
+  //speed factor to get wind speed and direction changes
+  WindDirectionChangeSpeed = 0.0005;
+  WindStrengthChangeSpeed  = 0.01;
+
+  //speed factor to get weather changes
+  WeatherChangeSpeed = 0.01;
+
+  //factor the weather amount will affect wind strength
+  //(0 = none, 1 = wind strength is equal to weather amount)
+  WeatherAmountAffectsWindStrengthFactor = 0.5;
+
+  //clouds filenames
+  CloudFile[LIGHT1]  = Data\World\CommonFX\Clouds\Light1.sky;
+  CloudFile[LIGHT2]  = Data\World\CommonFX\Clouds\Light2.sky;
+  CloudFile[MEDIUM1] = Data\World\CommonFX\Clouds\Medium1.sky;
+  CloudFile[MEDIUM2] = Data\World\CommonFX\Clouds\Medium2.sky;
+  CloudFile[HARD1]   = Data\World\CommonFX\Clouds\Hard1.sky;
+  CloudFile[HARD2]   = Data\World\CommonFX\Clouds\Hard2.sky;
+
+  //rain and snow filenames
+  PrecipitationFile[SNOW] = Data\World\CommonFX\Precipitation\Snow.pre;
+  PrecipitationFile[RAIN] = Data\World\CommonFX\Precipitation\Rain.pre;
+
+  //wind loop sound filenames
+  WindLoopSoundFile[SNOW] = Data\World\CommonFX\Sounds\ColdWindLoop.wav;
+  WindLoopSoundFile[RAIN] = Data\World\CommonFX\Sounds\WindLoop.wav;
+
+  //wind on trees loop sound filename
+  WindOnTreesLoopSoundFile = Data\World\CommonFX\Sounds\TreesWindLoop.wav;
+
+  //rain loop sound filename
+  RainLoopSoundFile = Data\World\CommonFX\Sounds\RainLoop.wav;
+
+  //thunder fx speed (will affect the frequency of the effect)
+  ThunderFXSpeed = 0.1;
+
+  //minimum weather amount to execute thunder fx
+  ThunderFXMinWeatherStrength = 0.5;
+
+  //thunder sound filenames
+  ThunderSoundFiles = Data\World\CommonFX\Sounds\Thunder1.wav,
+                      Data\World\CommonFX\Sounds\Thunder2.wav,
+                      Data\World\CommonFX\Sounds\Thunder3.wav,
+                      Data\World\CommonFX\Sounds\Thunder4.wav;
+
+  //lightning fx filenames
+  LightningFiles = Data\World\CommonFX\Lightning\Lightning1.sky,
+                   Data\World\CommonFX\Lightning\Lightning2.sky,
+                   Data\World\CommonFX\Lightning\Lightning3.sky,
+                   Data\World\CommonFX\Lightning\Lightning4.bgr,
+                   Data\World\CommonFX\Lightning\Lightning5.bgr,
+                   Data\World\CommonFX\Lightning\Lightning6.bgr,
+                   Data\World\CommonFX\Lightning\Lightning4.bgr, //BGR repeated to make it more frequent
+                   Data\World\CommonFX\Lightning\Lightning5.bgr,
+                   Data\World\CommonFX\Lightning\Lightning6.bgr,
+                   Data\World\CommonFX\Lightning\Lightning4.bgr,
+                   Data\World\CommonFX\Lightning\Lightning5.bgr,
+                   Data\World\CommonFX\Lightning\Lightning6.bgr;
+
+  //lightning fx minimum time, in seconds
+  LightningFXMinTime = 0.5;
+
+  //lightning fx maximum time, in seconds
+  LightningFXMaxTime = 1;
+
+  //lightning fx minimum opacity
+  LightningFXMinOpacity = 0.8;
+
+  //lightning fx maximum opacity
+  LightningFXMaxOpacity = 1;
+
+  //rainbow file
+  RainbowFile = Data\World\CommonFX\Rainbow\Rainbow.bgr;
+
+  //weather amount to define a strong sun and a strong rain for the rainbow fx
+  RainbowStrongRainWeatherAmount = 0.75;
+  RainbowStrongSunWeatherAmount  = 0.5;
+
+  //rainbow probability to happen in a strong sun, after a strong rain in a level
+  RainbowProb = 0.05;
+
+  //min and max time to show the rainbow fx, in seconds
+  RainbowMinTime = 120;
+  RainbowMaxTime = 240;
+
+  //crickets loop sound filename
+  CricketsLoopSoundFile = Data\World\CommonFX\Sounds\CricketsLoop.wav;
+
+  //crickets sound initial and final day percents
+  CricketsSoundInitialDayPercent = 0.1;
+  CricketsSoundFinalDayPercent   = 0.9;
+
+  //frogs sound min / max weather amount
+  FrogsSoundMinWeatherAmount = 0.5;
+  FrogsSoundMaxWeatherAmount = 0.75;
+
+  //distance from camera to water to fade frogs sound, in meters
+  FrogsSoundDistanceFromWater = 50;
+
+  //radius around the camera to query about vegetation density, to fade wind on trees sound, in meters
+  WindOnTreesSoundDistanceFromVegetation = 25;
+
+  //frogs loop sound filename
+  FrogsLoopSoundFile = Data\World\CommonFX\Sounds\FrogsLoop.wav;
+
+  //train velocity, in km/h
+  TrainVelocity = 80;
+
+  //min/max number of train cargo links
+  MinTrainCargoLinks = 3;
+  MaxTrainCargoLinks = 6;
+
+  //cars velocity, in km/h
+  CarsVelocity = 80;
+
+  //min/max timer to create a new car, in seconds
+  MinNewCarTimer = 30;
+  MaxNewCarTimer = 10;
+
+  //hotspot object frequency it will attract animals, in seconds
+  HotspotObjectAttractFrequency = 300;
+
+  //splash timers [min/max] in seconds
+  SplashTimers[STOP] = 0.7, 0.6;
+  SplashTimers[SLOW] = 0.2, 0.3;
+  SplashTimers[FAST] = 0.2, 0.2;
+}
+
+//animal behavior
+AnimalBehavior {
+
+  //look ahead distance when animal is building an AI path (with tree evasion), in meters
+  BuildPathLookAheadDist = 20;
+}
+
+//animal senses
+AnimalSenses {
+
+  //factor to multiply all senses according gameplay level
+  SensesFactorGameplay[EASY]   = 0.8;
+  SensesFactorGameplay[NORMAL] = 1;
+  SensesFactorGameplay[EXPERT] = 1.1;
+
+  //factor to multiply all senses according animal size
+  SensesFactorMinAnimalSize = 0.85;
+  SensesFactorMaxAnimalSize = 1.15;
+
+  //factor to multiply all senses according attention level
+  SensesFactorMinAttention = 0.9;
+  SensesFactorMaxAttention = 1.1;
+}
+
+//animal vision section
+AnimalVision {
+
+  //run frequency, in hz
+  SightHz = 1;
+}
+
+//animal hearing section
+AnimalHearing {
+
+  //sound radius each sound type have, in meters (can be set by gameplay level, optionally)
+  SoundRadius[SLOW_FOOTSTEP]        = 20;  //this radius will be interpolated from slow to fast according agent speed
+  SoundRadius[FAST_FOOTSTEP]        = 120;
+  SoundRadius[HORSE_SLOW_FOOTSTEP]  = 40;  //this radius will be interpolated from slow to fast according agent speed
+  SoundRadius[HORSE_FAST_FOOTSTEP]  = 160;
+  SoundRadius[FALL]                 = 70;  //when an agent falls to the ground (die fall too)
+  SoundRadius[WEAPON_FIRE]          = 220;
+  SoundRadius[WEAPON_RELOAD]        = 15;
+  SoundRadius[WEAPON_DRY]           = 10;  //sound when weapon fires without a bullet
+  SoundRadius[BOW_FIRE]             = 10;
+  SoundRadius[MOTOR_VEHICLE]        = 180; //constant motorized vehicle noise
+  SoundRadius[BULLET_HIT]           = 5;   //when a bullet hit something
+  SoundRadius[ARROW_HIT]            = 5;   //when an arrow hit something
+  SoundRadius[HUNTER_START, EASY]   = 120; //when hunter starts in a level, in easy mode
+  SoundRadius[HUNTER_START, NORMAL] = 170; //when hunter starts in a level, in normal mode
+  SoundRadius[HUNTER_START, EXPERT] = 200; //when hunter starts in a level, in expert mode
+  SoundRadius[BLOW_CALL]            = 130; //when hunter blows a call
+
+  //sounds modification type
+  //[ALL]   modify using animal senses, animal value, gameplay level, hunter skill
+  //[NONE]  will not be modified
+  //[VALUE] will be modified by the animal value (using Min/MaxAnimalValueSoundModification) and 
+  SoundRadiusModification[SLOW_FOOTSTEP]       = ALL;
+  SoundRadiusModification[FAST_FOOTSTEP]       = ALL;
+  SoundRadiusModification[HORSE_SLOW_FOOTSTEP] = ALL;
+  SoundRadiusModification[HORSE_FAST_FOOTSTEP] = ALL;
+  SoundRadiusModification[FALL]                = ALL;
+  SoundRadiusModification[WEAPON_FIRE]         = NONE;
+  SoundRadiusModification[WEAPON_RELOAD]       = NONE;
+  SoundRadiusModification[WEAPON_DRY]          = NONE;
+  SoundRadiusModification[BOW_FIRE]            = NONE;
+  SoundRadiusModification[MOTOR_VEHICLE]       = NONE;
+  SoundRadiusModification[BULLET_HIT]          = NONE;
+  SoundRadiusModification[ARROW_HIT]           = NONE;
+  SoundRadiusModification[HUNTER_START]        = VALUE;
+  SoundRadiusModification[BLOW_CALL]           = ALL;
+
+  //call distance, in meters
+  CallDistance = 400;
+
+  //sound speed, in meters/s (also use to delay animal hearing according sound sorce distance)
+  SoundSpeed = 120;
+}
+
+//animal smell section
+AnimalSmell {
+
+  //default distance in meters an animal will smell other agent, in a perfect wind case
+  //(will be multiplied by each animal smell factor)
+  SmellDistance = 120;
+
+  //default distance in meters an animal will smell a scent agent, in a perfect wind case
+  //(will be multiplied by each animal smell factor)
+  ScentDistance = 300;
+
+  //percentage of how the wind affects the smell radius
+  //(a predator against the wind will reach "SmellDistance * (1 - SmellRadiusWindInfluence)")
+  SmellRadiusWindInfluence = 0.9;
+
+  //run frequency, in hz
+  SmellHz = 0.5;
+
+  //hotspot attractant timer, in seconds (duration it will attract the animal)
+  HotspotAttractantTimer = 90;
+}

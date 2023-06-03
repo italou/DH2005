@@ -1,0 +1,31 @@
+//==============================================================================================================
+// Zeiss Victory FL Diavari v2 8-40x56 Rifle Scope
+//==============================================================================================================
+
+//general item variables
+General {
+
+  Name     = Zeiss_Victory_Scope_8_40;
+  Type     = Scope;
+  Useable  = FALSE;
+
+  //multiplayer item category
+  MultiplayerCategory = Scopes;
+
+  Helper = @Scope;
+  Model  = Data\Items\Zeiss_8-40x\ThermalScope.j3d;
+
+  //scope class for compatible scopes/items
+  ScopeClass = RifleScope;
+
+  //zoom values
+  Zoom = 8, 16, 24, 32, 40;
+
+  //show range finding?
+  ShowRangeFinding = TRUE;
+
+  InterfaceScale = 1;
+
+  //use scope support flag
+  UseScopeSupport = TRUE;
+}

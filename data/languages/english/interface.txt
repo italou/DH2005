@@ -1,0 +1,263 @@
+[Loading] Loading
+
+[d_of_d] %d of %d
+
+[GameSpy_Error_Title] GameSpy Warning
+[GameSpy_Error_0] TCP/IP error.
+[GameSpy_Error_1] Server may not be published in GameSpy due to a possible firewall.
+[GameSpy_Error_2] Can't connect to the GameSpy server.
+
+[HUNT_CAPTION]        HUNT
+[SCOUT_CAPTION]       SCOUT
+[HUNT_ONLINE_CAPTION] HUNT ONLINE
+[WILDLIFE_CAPTION]    WILDLIFE
+
+[Start_Point_Caption_Scout] INITIAL SCOUTING POSITION
+[Start_Point_Caption_Hunt]  INITIAL HUNTING POSITION
+
+[antler_desc]             %d-Point (%d total)
+[tip_to_tip_distance]     Tip to tip
+[outside_spread_distance] Outside spread
+[inside_spread_distance]  Inside spread
+
+[Left]  Left
+[Right] Right
+[Diff]  Diff
+
+[Length]   Length
+[Length_1] Length 1
+[Length_2] Length 2
+[Length_3] Length 3
+[Length_4] Length 4
+[Length_5] Length 5
+
+[Circumference_1] Circumference 1
+[Circumference_2] Circumference 2
+[Circumference_3] Circumference 3
+[Circumference_4] Circumference 4
+
+[Total] Total
+[Abnormal_Points] Abnormal Points
+
+[FINAL_SCORE]  FINAL SCORE
+[WORLD_RECORD] WORLD RECORD
+[RECORD_BOOK]  RECORD BOOK
+
+[Hunters] Hunters
+[Items]   Items
+[Animals] Animals
+[Levels]  Level
+[Globals] Globals
+
+[skill_caption_Tracking]       TRACKING
+[skill_caption_Stealth]        STEALTH
+[skill_caption_Calling]        CALLING
+[skill_caption_Presence]       PRESENCE
+[skill_caption_Hardiness]      HARDINESS
+[skill_caption_Horsemanship]   HORSEMANSHIP
+[skill_caption_Weapons]        WEAPONS
+[skill_caption_Strength]       STRENGTH
+[skill_caption_Stamina]        STAMINA
+
+[skill_comments_Tracking]       Tracking is the ability to follow an animal that has already been identified.  As this skill improves, the hunter will see more tracks and blood.
+[skill_comments_Stealth]        The stealth ability allows the hunter to make less noise, both audible and visual.
+[skill_comments_Calling]        Higher calling ability makes the hunter’s calls more effective, particularly with larger animals.  It also gives less chance of “blowing” a call, which will frighten away the animal instead of calling it in.
+[skill_comments_Presence]       Presence is gained through long periods of dedication to and study of nature.  The hunter who is more in tune with nature and his prey has a better chance of success in his hunts.  Higher presence will enhance the hunter's other abilities.  A higher presence score will allow the player to discover more animal signs.  The player will also distinguish sounds of animals more distinctly than ambiental sounds.
+[skill_comments_Hardiness]      A hardier hunter will move faster, especially when carrying heavy weight like the tripod.
+[skill_comments_Horsemanship]   A higher horsemanship allows the player to ride faster, mount and unmount quicker, climb and descend steeper slopes.
+[skill_comments_Weapons]        The weapons skill is a general skill that applies to all weapons.  A higher weapons skill gives a quicker preparation time, faster reload time, better control of the weapon, and quicker recovery after the shot. 
+[skill_comments_Strength]       This represents the physical force of the hunter.  A higher strength will allow the player to run faster, change positions more quickly, set up stands and tripods more quickly, and handle weapons better which require more physical force, such as bows handguns and high-caliber rifles.
+[skill_comments_Stamina]        A higher stamina allows the hunter to run longer without tiring.
+[skill_comments_points]         
+
+[trophyGSB_name] Bronze Grand Slam
+[trophyGSS_name] Silver Grand Slam
+[trophyGSG_name] Gold Grand Slam
+[trophyMH_name]  Master Hunter
+[trophySH_name]  Seasoned Hunter
+[trophyAGW_name] All Gold Weapons
+
+[trophyGSB_desc] The Bronze Grand Slam is yours for taking one buck of each species. A spectacular achievement.
+[trophyGSS_desc] This rare trophy, the Silver Grand Slam, is only won by hunters who manage a record book buck from each species.
+[trophyGSG_desc] The GOLD GRAND SLAM is only for the most elite Deer Hunter 2005 hunters, who manage the amazing feat of taking one world record buck from each species.
+[trophyMH_desc]  Only the best of the best earn a hunter rating of 100 and the rank of Master Hunter. You have beaten the toughest challenges to achieve this honor.
+[trophySH_desc]  Your Seasoned Hunter trophy is for spending many hours hunting. The creators of Deer Hunter 2005 appreciate your dedication.
+[trophyAGW_desc] This extremely rare trophy is for gaining all of the "golden" weapons. This trophy is only for the most dedicated of Deer Hunter 2005 players.
+
+[Congratulations_Trophy] Congratulations! You have shown yourself to be one of the finest Deer Hunter 2005 hunters by earning one of six Deer Hunter 2005 trophies! Look though your trophy case to see what you've just won. You also received a bonus skill point which you can use right now to improve your hunter's skills.
+[Congratulations_Skin]   You just earned a gold weapon skin! It will be avaiable on the Skin settings of the Custom Weapon screen.
+
+[ammo_energy_caption]            Energy
+[ammo_calibration_caption]       Calibration
+[ammo_range_calibration_caption] Range 
+[ammo_def_calibration_caption]   Recommended
+[ammo_energy_high]    High
+[ammo_energy_medium]  Medium
+[ammo_energy_low]     Low
+
+[hud_no_item_selected] No item selected
+[scout_mode] Scouting Mode
+
+[Action_Hint_Desc_0_Key] Press action key to
+[Action_Hint_Desc_1_Key] Press '%s' key to
+[Action_Hint_Desc_2_Key] Press '%s' or '%s' key to
+
+[Download_Custom_Maps_title] Download Custom Maps
+[warning_title] WARNING
+[Error_title] ERROR
+[Error_renaming_playback] Error renaming the movie. Check to make sure this is not a duplicate name.
+[Error_applying_settings] Could not apply new settings.
+[Error_Download_Custom_Maps] There was an error opening the custom map page "http://www.southlogic.com/redir/dh2005maps". Check your internet connection status or try to open the page manually.
+
+[Download_Custom_Maps] This command will close the game and open a web page with custom maps to download. Do you want to proceed?
+
+[Yes] Yes
+[No]  No
+
+[Trophy_Date_Format] %b %d, %Y %h:%M:%s %p
+[First_Hour_Format] %h %p
+
+[am] am
+[pm] pm
+
+[Time_Scale_Text] one real minute = %d game minute(s)
+
+[Abbreviated_Month_1] Jan
+[Abbreviated_Month_2] Feb
+[Abbreviated_Month_3] Mar
+[Abbreviated_Month_4] Apr
+[Abbreviated_Month_5] May
+[Abbreviated_Month_6] Jun
+[Abbreviated_Month_7] Jul
+[Abbreviated_Month_8] Aug
+[Abbreviated_Month_9] Sep
+[Abbreviated_Month_10] Oct
+[Abbreviated_Month_11] Nov
+[Abbreviated_Month_12] Dec
+
+[opening_server]          Opening Server...
+[connecting_to_server]    Connecting to server... (Press ESC to abort)
+[sending_info_to_clients] Sending information to clients...
+
+[Vote_passed.] Vote passed.
+[Vote_failed.] Vote failed.
+[Vote_cast.]   Vote cast.
+
+[Waiting_for_server_1] Waiting for server
+[Waiting_for_server_2] Waiting for server.
+[Waiting_for_server_3] Waiting for server..
+[Waiting_for_server_4] Waiting for server...
+
+[Server_Ready] Server Ready
+
+[List_of_servers_LAN]         List of LAN servers
+[List_of_servers_at_Internet] List of Internet servers
+[List_of_servers_at_IP]       List of servers at address "%s"
+
+[Password]              Password
+[Password_Required]     required
+[Password_Not_Required] none
+
+[No_servers_found]         No servers found
+[Searching_for_servers...] Searching for servers...
+
+[Ping] Ping
+
+[Server]   Server
+[<SERVER>] <Server>
+
+[Winner] Winner
+
+[Illegal] Illegal
+
+[Best] Best
+
+[Trophies] Trophies
+
+[Player] Player
+
+[Player_s_was_kicked_after_shooting_another_hunter] Player "%s" was kicked after shooting another hunter.
+[Player_shot_another_hunter_warning] Please don't shoot the other players. That type of behavior is not allowed on this server.
+[Player_s_is_connecting]    Player "%s" is connecting....
+[Player_s_joined_the_match] Player "%s" joined the match.
+[Player_s_leave_the_match]  Player "%s" disconnected.
+[Player_s_entered_the_game] Player "%s" has entered the game.
+
+[s_has_called_a_vote:]       %s has called a vote:
+[Current_Result:___YES___NO] Current Result: %d YES %d NO
+[Time_Remaining:__s]         Time Remaining: %d s
+
+[Finish_game?]                    Finish Game?
+[Change_map_to__s_?]              Change map to "%s" (%s)?
+[Change_time-limit_to_d_minutes?] Change time-limit to %d minutes?
+[Disable_time-limit?]             Disable time-limit?
+[Change_game-type_to__s_?]        Change game-type to "%s"?
+[Kick_player__s__<d>?]            Kick player "%s" <%d>?
+[Ban_player__s__<d>?]             Ban player "%s" <%d>?
+
+[Time-limit_changed_to_d_minutes] Time-limit changed to %d minutes.
+
+[Congratulations_s_!]                       Congratulations "%s"!
+[Congratulations_fawn!]                     Fawns count toward your bag limit but do not count as trophies.
+[Congratulations_s_fawn!]                   "%s" just bagged a fawn. Fawns count toward your bag limit but do not count as trophies.
+[You_just_bagged_a_d_lb_s_s_s!]             You just bagged a %d lb %s %s %s!
+[The_antlers_score_f_points_World_Record.]  The antlers score %.03f points "World Record".
+[The_antlers_score_f_points.]               The antlers score %.03f points.
+
+[You_just_bagged_a_d_lb,_s_s!] You just bagged a %d lb, %s %s!
+
+[s_is_now_illegal:_s] "%s" is now illegal: %s
+
+[Error_exporting_trophy] Error exporting trophy.
+
+[Camera_Info_1] First-Person Camera
+[Camera_Info_2] Third-Person Camera
+[Camera_Info_3] Free Camera 1 (Hold F7 To Change)
+[Camera_Info_4] Free Camera 2 (Hold F7 To Change)
+
+[pounds] pounds
+[inches] inches
+
+[Weapon_Filter_Empty_Error] No weapons available!
+
+[Weapon_Customization_Rename_Error_s] Could not rename weapon. There is already a weapon named %s.
+[Weapon_Customization_General_Error] Could not save Weapon resource.
+
+[You_Dont_Have_This_Custom_Map] Missing custom map!
+
+[Compass_N]  N
+[Compass_NE] NE
+[Compass_E]  E
+[Compass_SE] SE
+[Compass_S]  S
+[Compass_SW] SW
+[Compass_W]  W
+[Compass_NW] NW
+
+[hunter_skills_not_distributed] You must distribute all 25 skill points for your hunter. 
+
+[player_has_no_weapon] You are entering the game without a weapon. Continue anyway?
+
+[item_not_allowed] One or more items that you're using are not allowed in the current server or map. Check current configuration?
+[item_exotic] One or more items that you're using are exotic so this hunt will not affect the player's ranking. Check current configuration?
+
+[Multiday_title] Multiday Hunt
+[Multiday_message] Do you want to camp and continue this hunt tomorrow?
+
+[Quit_Wildlife_Caption] STOP WILDLIFE
+[Quit_Single_Caption]   STOP HUNTING
+[Quit_Scout_Caption]    STOP SCOUTING
+[Quit_Playback_Caption] QUIT PLAYBACK
+[Quit_Host_Caption]     CLOSE SERVER
+[Quit_Client_Caption]   DISCONNECT
+
+[Blown_call] Blown Call
+
+[Value] Value
+
+[Mounting_Desc]   Setting up concealment
+[Unmounting_Desc] Taking down concealment
+
+[Creating_Level_Obj] Creating Level
+
+[Multi-Weapon] Multi-Weapon

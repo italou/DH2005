@@ -1,0 +1,14 @@
+General {
+
+  Name        = Browning A-Bolt Stalker;
+  Action      = BoltRifle;
+  Ammo        = pr338um2;
+  Scope       = Zeiss_Victory_Scope_8_40;
+  SkinCamo    = data\pre-made\skins\camo\synt3.jpg;
+  SkinDetail  = data\pre-made\skins\detail\boltrifle\magbolt[det4].png;
+  Reticle     = data\pre-made\reticles\rzv.png;
+  Calibration = 200.000000;
+  SkinIndex   = 1;
+  RangeFinder = TRUE;
+  ReadOnly    = TRUE;
+}
